@@ -10,7 +10,8 @@ export default {
 		fontFamily: {
 			heading: ['Akira-Extended'],
 			content: ['Questrial-Regular'],
-			subheading: ['Smile-Regular']
+			subheading: ['Smile-Regular'],
+            'heading-italic': ['Geom-Graphic'],
 		},
   		borderRadius: {
   			lg: 'var(--radius)',

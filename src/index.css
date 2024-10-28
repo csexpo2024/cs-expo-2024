@@ -79,4 +79,9 @@
     font-style: normal;
     src: url("@/assets/fonts/smile.otf") format("opentype");
   }
+  @font-face {
+    font-family: 'Geom-Graphic';
+    font-style: normal;
+    src: url("@/assets/fonts/geom-graphic.TTF") format("opentype");
+  }
 }
