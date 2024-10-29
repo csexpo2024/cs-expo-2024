@@ -2,8 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Landing from "@/routes/landing";
 import { Layout } from "@/components/layout";
-import Events from "@/routes/events";
-import Projects from "@/routes/projects";
+
+import { Events, Expo, DevDay, Committees } from "@/routes/events";
+import { ProjectCollection, Project, HallOfFame } from "@/routes/projects";
 import Partners from "@/routes/partners";
 import Gallery from "@/routes/gallery";
 import About from "@/routes/about";
@@ -24,8 +25,32 @@ export const router = createBrowserRouter([
         element: <Events />,
       },
       {
+        path: "/events/cs-expo",
+        element: <Expo />,
+      },
+      {
+        path: "/events/dev-day",
+        element: <DevDay />,
+      },
+      {
+        path: "/events/committees",
+        element: <Committees />,
+      },
+      {
         path: "/projects",
-        element: <Projects />,
+        element: <ProjectCollection />,
+      },
+      {
+        path: "/projects/collection",
+        element: <ProjectCollection />,
+      },
+      {
+        path: "/projects/hall-of-fame",
+        element: <HallOfFame />,
+      },
+      {
+        path: "/projects/:projectid",
+        element: <Project />,
       },
       {
         path: "/partners",
