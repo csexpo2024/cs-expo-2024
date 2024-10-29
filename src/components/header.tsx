@@ -30,7 +30,7 @@ const links = [
     route: "/events",
     label: "Events",
     subroutes: [
-      { route: "/events/dev-", label: "Dev Day" },
+      { route: "/events/dev-day", label: "Dev Day" },
       { route: "/events/cs-expo", label: "CS Expo" },
       { route: "/events/committees", label: "Committees" },
     ],
