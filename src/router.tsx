@@ -7,11 +7,13 @@ import Projects from "@/routes/projects";
 import Partners from "@/routes/partners";
 import Gallery from "@/routes/gallery";
 import About from "@/routes/about";
+import { NotFound } from "@/routes/not-found";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
