@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 
 import { ExternalLink } from "lucide-react";
 
+import { PolaroidFrame } from "@/components/polaroid-frame";
+
 const Landing = () => {
   return (
     <>
@@ -23,6 +25,14 @@ const Landing = () => {
           Unveiling <span className="text-yellow-500">possibilites</span> and
           creating new <span className="text-red-500">realities</span>
         </h2>
+        <div className="flex w-full pt-24 justify-around gap-y-4 flex-wrap px-10">
+          {/* placeholder only - TODO: replace with real sponsors */}
+          {Array.from({ length: 7 }).map((_, i) => (
+            <PolaroidFrame key={i}>
+              <img src={LogoSilver} className="w-24" />
+            </PolaroidFrame>
+          ))}
+        </div>
       </section>
       <section className="flex flex-col gap-y-40 text-center items-center justify-center bg-[#110101] p-24">
         <div>
