@@ -2,6 +2,7 @@ import ExpoBg from "@/assets/img/bg/dev-day-hero.png";
 import LogoSilver from "@/assets/img/logo-silver-cropped.png";
 
 import { PolaroidArticle } from "@/components/polaroid-article";
+import { EventInfo } from "@/components/event-info";
 
 import {
   Carousel,
@@ -95,24 +96,6 @@ const Expo = () => {
         </Carousel>
       </section>
     </>
-  );
-};
-
-const EventInfo = ({
-  title,
-  subtitle,
-  body,
-}: {
-  title: string;
-  subtitle: string;
-  body: string;
-}) => {
-  return (
-    <div className="flex flex-col z-50">
-      <p className="font-heading text-6xl">{title}</p>
-      <p className="text-yellow-500 uppercase text-xl lg:w-3/6">{subtitle}</p>
-      <p className="text-lg lg:w-3/6 mt-3 p-2 font-semibold">{body}</p>
-    </div>
   );
 };
 

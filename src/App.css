@@ -1,4 +1,9 @@
 .vertical-text {
-    writing-mode: vertical-lr;
-    text-orientation: upright;
-  }
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.vertical-text-rtl {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
