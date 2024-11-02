@@ -1,6 +1,7 @@
 import LogoSilver from "@/assets/img/logo-silver-cropped.png";
 import BgRed from "@/assets/img/bg/09-red-grid.png";
 import BgRedFlow from "@/assets/img/bg/10-red-flow.png";
+import MagnifyingGlass from "@/assets/img/magnifying-glass.png";
 
 import { Button } from "@/components/ui/button";
 
@@ -8,31 +9,84 @@ import { ExternalLink } from "lucide-react";
 
 import { PolaroidFrame } from "@/components/polaroid-frame";
 
+import { motion, useScroll, useTransform } from 'framer-motion';
+
+import { useRef } from "react";
+
 const Landing = () => {
+  const heroRef = useRef(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start start', 'end start']
+  });
+
+  const heroBgY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['0%', '110%']
+  );
+
+  const magnifyingGlassX = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['1%', '300%']
+  );
+
+  const magnifyingGlassOpacity = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['100%', '-300%']
+  );
+
   return (
     <>
-      <section
-        className="flex flex-col gap-5 justify-center items-center py-16 lg:px-24"
-        style={{
-          backgroundImage: `url(${BgRed})`,
-        }}
+      <section 
+        ref={heroRef}
+        className="h-[200vh]"
       >
-        <img
-          className="text-6xl font-bold font-heading max-w-xs p-5"
-          src={LogoSilver}
-        />
-        <h2 className="text-3xl px-2 md:p=0 font-heading-italic lg:w-1/2 text-center uppercase">
-          Unveiling <span className="text-yellow-500">possibilites</span> and
-          creating new <span className="text-red-500">realities</span>
-        </h2>
-        <div className="flex w-full pt-24 justify-around gap-y-4 flex-wrap px-10">
-          {/* placeholder only - TODO: replace with real sponsors */}
-          {Array.from({ length: 7 }).map((_, i) => (
-            <PolaroidFrame key={i}>
-              <img src={LogoSilver} className="w-24" />
-            </PolaroidFrame>
-          ))}
-        </div>
+        <motion.section
+          className="flex flex-col gap-5 justify-center items-center py-16 lg:px-24 pt-[20vh] min-h-screen sticky top-0 overflow-hidden"
+          style={{
+            backgroundImage: `url(${BgRed})`,
+            backgroundPositionY: heroBgY
+          }}
+        >
+          <div
+            className="relative"
+          >
+            <img
+              className="text-6xl font-bold font-heading max-w-xs p-5"
+              src={LogoSilver}
+            />
+            <motion.img
+              className="absolute min-w-[70vh] md:min-w-[80vh] lg:min-w-[70vh] top-[-20px] left-[-10px] z-10"
+              src={MagnifyingGlass}
+              style={{ x: magnifyingGlassX, opacity: magnifyingGlassOpacity }}
+            />
+          </div>
+          <motion.h2 
+            className="text-3xl px-2 md:p=0 font-heading-italic lg:w-1/2 text-center uppercase"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{
+              margin: '-200px',
+              amount: 'all'
+            }}
+          >
+            Unveiling <span className="text-yellow-500">possibilites</span> and
+            creating new <span className="text-red-500">realities</span>
+          </motion.h2>
+          <div className="flex w-full pt-24 justify-around gap-y-4 flex-wrap px-10">
+            {/* placeholder only - TODO: replace with real sponsors */}
+            {Array.from({ length: 7 }).map((_, i) => (
+              <PolaroidFrame key={i}>
+                <img src={LogoSilver} className="w-24" />
+              </PolaroidFrame>
+            ))}
+          </div>
+        </motion.section>
       </section>
       <section className="flex flex-col gap-y-40 text-center items-center justify-center bg-[#110101] p-24">
         <div>
