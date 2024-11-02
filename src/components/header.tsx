@@ -15,6 +15,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuTrigger,
+  DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 
 type NavItemProps = {
@@ -72,14 +73,16 @@ const NavItem = ({ item }: NavItemProps) => {
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             {item.subroutes.map((subroute) => (
-              <NavLink
-                to={subroute.route}
-                key={subroute.route}
-                className="flex items-center justify-between w-full px-4 py-2"
-              >
-                {subroute.label}
-                <ChevronRight />
-              </NavLink>
+              <DropdownMenuItem asChild>
+                <NavLink
+                  to={subroute.route}
+                  key={subroute.route}
+                  className="flex items-center justify-between w-full px-4 py-2"
+                >
+                  {subroute.label}
+                  <ChevronRight />
+                </NavLink>
+              </DropdownMenuItem>
             ))}
           </DropdownMenuContent>
         </DropdownMenu>
