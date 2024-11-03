@@ -96,12 +96,22 @@ const Landing = () => {
             Unveiling <span className="text-yellow-500">possibilites</span> and
             creating new <span className="text-red-500">realities</span>
           </motion.h2>
-          <div className="flex w-full pt-24 justify-around gap-y-4 flex-wrap px-10">
-            {/* placeholder only - TODO: replace with real sponsors */}
-            {Array.from({ length: 7 }).map((_, i) => (
-              <PolaroidFrame key={i}>
-                <img src={LogoSilver} className="w-24" />
-              </PolaroidFrame>
+          <div className="flex">
+            {Array.from({ length: 3 }).map((_, i) => (
+              <motion.div
+                key={i}
+                className="flex pt-24 gap-y-4 gap-x-10 px-5 md:gap-x-20 md:px-10"
+                initial={{ x: 0 }}
+                animate={{ x: '-100%' }}
+                transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+              >
+                {/* placeholder only - TODO: replace with real sponsors */}
+                {Array.from({ length: 15 }).map((_, j) => (
+                  <PolaroidFrame key={j}>
+                    <img src={LogoSilver} className="min-w-24" />
+                  </PolaroidFrame>
+                ))}
+              </motion.div>
             ))}
           </div>
         </section>
