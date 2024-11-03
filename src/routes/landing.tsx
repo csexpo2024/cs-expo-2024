@@ -55,9 +55,12 @@ const Landing = () => {
           <div
             className="relative"
           >
-            <img
+            <motion.img
               className="text-6xl font-bold font-heading max-w-xs p-5"
               src={LogoSilver}
+              initial={{ opacity: 0, x: -100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
             />
             <motion.img
               className="absolute min-w-[70vh] md:min-w-[80vh] lg:min-w-[70vh] top-[-20px] left-[-10px] z-10"
@@ -89,7 +92,15 @@ const Landing = () => {
         </motion.section>
       </section>
       <section className="flex flex-col gap-y-40 text-center items-center justify-center bg-[#110101] p-24">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{
+            margin: '-200px',
+            once: true
+          }}
+        >
           <h1 className="font-heading-italic text-6xl">CS EXPO</h1>
           <p className="text-3xl text-muted-foreground max-w-4xl pt-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -100,8 +111,16 @@ const Landing = () => {
             <span>View Event</span>
             <ExternalLink className="h-6 w-6" />
           </Button>
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{
+            margin: '-200px',
+            once: true
+          }}
+        >
           <h1 className="font-heading-italic text-6xl">DEV DAY</h1>
           <p className="text-3xl text-muted-foreground max-w-4xl pt-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
@@ -112,17 +131,35 @@ const Landing = () => {
             <span>View Event</span>
             <ExternalLink className="h-6 w-6" />
           </Button>
-        </div>
+        </motion.div>
       </section>
       <section
         style={{ backgroundImage: `url(${BgRedFlow})` }}
         className="bg-opacity-75"
       >
         <div className="bg-black bg-opacity-40 p-24">
-          <h1 className="font-heading-italic text-6xl text-center pb-20">
+          <motion.h1 
+            className="font-heading-italic text-6xl text-center pb-20"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{
+              margin: '-200px',
+              once: true
+            }}
+          >
             Events
-          </h1>
-          <div className="flex flex-col gap-10 lg:px-40 xl:px-">
+          </motion.h1>
+          <motion.div 
+            className="flex flex-col gap-10 lg:px-40 xl:px-"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{
+              margin: '-200px',
+              once: true
+            }}
+          >
             <div>
               <p className="font-heading text-4xl">CS EXPO DAY 1</p>
               <p className="text-yellow-500 uppercase">
@@ -141,7 +178,7 @@ const Landing = () => {
                 November 22, 2024 | 8:00 AM - 1:00 PM
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
