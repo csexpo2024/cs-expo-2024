@@ -15,42 +15,54 @@ import { useRef } from "react";
 
 const Landing = () => {
   const heroRef = useRef(null);
+  const eventsRef = useRef(null);
   
-  const { scrollYProgress } = useScroll({
+  const { scrollYProgress: heroYProgress } = useScroll({
     target: heroRef,
-    offset: ['start start', 'end start']
+    offset: ['start start', 'end end']
+  });
+
+  const { scrollYProgress: eventsYProgress } = useScroll({
+    target: eventsRef,
+    offset: ['start end', 'end start']
   });
 
   const heroBgY = useTransform(
-    scrollYProgress,
+    heroYProgress,
     [0, 1],
     ['0%', '110%']
   );
 
   const magnifyingGlassX = useTransform(
-    scrollYProgress,
+    heroYProgress,
     [0, 1],
     ['1%', '300%']
   );
 
   const magnifyingGlassOpacity = useTransform(
-    scrollYProgress,
+    heroYProgress,
     [0, 1],
     ['100%', '-300%']
   );
 
+  const eventsBgY = useTransform(
+    eventsYProgress,
+    [0, 1],
+    ['1%', '100%']
+  );
+
   return (
     <>
-      <section 
+      <motion.section 
         ref={heroRef}
         className="h-[200vh]"
+        style={{
+          backgroundImage: `url(${BgRed})`,
+          backgroundPositionY: heroBgY
+        }}
       >
-        <motion.section
-          className="flex flex-col gap-5 justify-center items-center py-16 lg:px-24 pt-[20vh] min-h-screen sticky top-0 overflow-hidden"
-          style={{
-            backgroundImage: `url(${BgRed})`,
-            backgroundPositionY: heroBgY
-          }}
+        <section
+          className="flex flex-col gap-5 justify-center items-center py-16 lg:px-24 pt-[20vh] min-h-screen sticky top-0 overflow-hidden" 
         >
           <div
             className="relative"
@@ -61,6 +73,9 @@ const Landing = () => {
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
+              viewport={{
+                once: true
+              }}
             />
             <motion.img
               className="absolute min-w-[70vh] md:min-w-[80vh] lg:min-w-[70vh] top-[-20px] left-[-10px] z-10"
@@ -89,8 +104,8 @@ const Landing = () => {
               </PolaroidFrame>
             ))}
           </div>
-        </motion.section>
-      </section>
+        </section>
+      </motion.section>
       <section className="flex flex-col gap-y-40 text-center items-center justify-center bg-[#110101] p-24">
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -133,11 +148,16 @@ const Landing = () => {
           </Button>
         </motion.div>
       </section>
-      <section
-        style={{ backgroundImage: `url(${BgRedFlow})` }}
+      <motion.section
+        ref={eventsRef}
+        style={{
+          backgroundImage: `url(${BgRedFlow})`,
+          backgroundPositionY: eventsBgY,
+          backgroundPosition: 'bottom'
+        }}
         className="bg-opacity-75"
       >
-        <div className="bg-black bg-opacity-40 p-24">
+        <div className="bg-black bg-opacity-40 p-24 h-[80dvh]">
           <motion.h1 
             className="font-heading-italic text-6xl text-center pb-20"
             initial={{ opacity: 0, x: -100 }}
@@ -180,7 +200,7 @@ const Landing = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };
