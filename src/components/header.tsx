@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
+import { useState, useEffect } from "react";
+
+import { useLocation } from "react-router-dom";
+
 import {
   Sheet,
   SheetContent,
@@ -102,6 +106,14 @@ const NavItem = ({ item }: NavItemProps) => {
 };
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
   const navLinks = links.map((link) => (
     <NavItem key={link.route} item={link} />
   ));
@@ -116,7 +128,7 @@ const Header = () => {
           Register
         </Button>
       </nav>
-      <Sheet>
+      <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="flex lg:hidden ml-auto" asChild>
           <Button variant="outline" size="icon">
             <Menu />
