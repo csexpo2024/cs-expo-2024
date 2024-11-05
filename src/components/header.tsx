@@ -71,7 +71,7 @@ const NavItem = ({ item }: NavItemProps) => {
               <ChevronDown />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent>
+          <DropdownMenuContent className="z-[100]">
             {item.subroutes.map((subroute) => (
               <DropdownMenuItem asChild>
                 <NavLink
@@ -122,7 +122,7 @@ const Header = () => {
             <Menu />
           </Button>
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="z-[100]">
           <SheetTitle>CS Expo 2024</SheetTitle>
           {/* TODO: use collapsible */}
           <div className="flex flex-col gap-5 py-5">{navLinks}</div>
