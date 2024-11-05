@@ -5,8 +5,8 @@ type PolaroidFrameProps = {
 };
 
 const SIZE = {
-  sm: ["p-2", "pb-6"],
-  lg: ["p-4", "pb-12"],
+  sm: ["p-2", "pb-6", "text-lg"],
+  lg: ["p-4", "pb-12", "text-2xl"],
 };
 
 const PolaroidFrame = ({ children, title, size }: PolaroidFrameProps) => {
@@ -19,7 +19,11 @@ const PolaroidFrame = ({ children, title, size }: PolaroidFrameProps) => {
       } bg-white rounded-sm text-center`}
     >
       <div className="p-4 bg-neutral-950 rounded-md">{children}</div>
-      {title && <p className="text-neutral-900 pb-2 font-semibold">{title}</p>}
+      {title && (
+        <p className={`text-neutral-900 pb-2 font-heading-italic ${_size[2]}`}>
+          {title}
+        </p>
+      )}
     </div>
   );
 };
