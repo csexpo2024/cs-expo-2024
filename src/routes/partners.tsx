@@ -3,10 +3,43 @@ import LogoSilver from "@/assets/img/logo-silver-cropped.png";
 import CautionTape from "@/assets/img/caution-tape-blank-hr.png";
 import CautionTapeGroup from "@/assets/img/caution-tape-shadowed.png";
 
+import { Facebook, Instagram, Globe } from "lucide-react";
+
+interface Sponsor {
+  name: string;
+  logo: string;
+  fb: string;
+  ig: string;
+  web: string;
+}
+
 const Partners = () => {
-  const gold = ["company A", "company B", "company C"];
-  const media = ["company A", "company B", "company C"];
-  const bronze = ["company A", "company B", "company C"];
+  /* TODO: replace with real sponsor data */
+  const gold = [
+    {
+      name: "Acme",
+      logo: LogoSilver,
+      fb: "#",
+      ig: "#",
+      web: "#",
+    },
+    {
+      name: "Acme",
+      logo: LogoSilver,
+      fb: "#",
+      ig: "#",
+      web: "#",
+    },
+    {
+      name: "Acme",
+      logo: LogoSilver,
+      fb: "#",
+      ig: "#",
+      web: "#",
+    },
+  ];
+  const media = gold;
+  const bronze = gold;
 
   return (
     <div className="bg-[#110101]">
@@ -17,11 +50,11 @@ const Partners = () => {
       <section className="text-center py-10">
         <h2 className="font-heading text-2xl">Gold Sponsors</h2>
         <span className="text-yellow-500 uppercase">
-          company a / company b / company c
+          our premier supporters
         </span>
         <div className="flex flex-col md:flex-row gap-12 justify-center items-center py-10">
-          {gold.map((company) => (
-            <PolaroidFrame size="lg" key={company} title={company}>
+          {gold.map((company, i) => (
+            <PolaroidFrame size="lg" key={i} title={company.name}>
               <img src={LogoSilver} alt="Gold Sponsor" className="w-52" />
             </PolaroidFrame>
           ))}
@@ -41,23 +74,21 @@ const Partners = () => {
       <section className="flex flex-col items-center lg:items-start p-24">
         <h2 className="font-heading text-2xl">Bronze Sponsors</h2>
         <span className="text-yellow-500 uppercase">
-          company a / company b / company c
+          our Essential contributors
         </span>
-        <div className="flex flex-col md:flex-row gap-5">
-          {bronze.map((company) => (
-            <GlassCard key={company} imghref={LogoSilver} />
+        <div className="flex flex-wrap justify-center gap-5">
+          {bronze.map((company, i) => (
+            <GlassCard key={i} sponsor={company} />
           ))}
         </div>
       </section>
       {/* Media Partners */}
       <section className="flex flex-col items-center lg:items-end px-24">
         <h2 className="font-heading text-2xl">Media Partners</h2>
-        <span className="text-yellow-500 uppercase">
-          company a / company b / company c
-        </span>
-        <div className="flex flex-col md:flex-row gap-5">
-          {media.map((company) => (
-            <GlassCard key={company} imghref={LogoSilver} />
+        <span className="text-yellow-500 uppercase">Expanding our reach</span>
+        <div className="flex justify-center flex-wrap gap-5">
+          {media.map((company, i) => (
+            <GlassCard key={i} sponsor={company} />
           ))}
         </div>
       </section>
@@ -73,10 +104,26 @@ const Partners = () => {
   );
 };
 
-const GlassCard = ({ imghref }: { imghref: string }) => {
+const GlassCard = ({ sponsor }: { sponsor: Sponsor }) => {
   return (
     <div className="bg-white bg-opacity-15 backdrop-blur-md rounded-lg shadow-lg p-4 my-4">
-      <img src={imghref} alt="Glass Card" className="w-40" />
+      <div className="flex justify-center">
+        <img src={sponsor.logo} alt="Glass Card" className="w-40" />
+      </div>
+      <div className="pt-3">
+        <p className="font-heading-italic text-lg pb-2">{sponsor.name}</p>
+        <div className="flex justify-between gap-5">
+          <a href={sponsor.fb}>
+            <Facebook />
+          </a>
+          <a href={sponsor.ig}>
+            <Instagram />
+          </a>
+          <a href={sponsor.web}>
+            <Globe />
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
