@@ -19,7 +19,7 @@ const PolaroidFrame = ({ children, title, size }: PolaroidFrameProps) => {
       } bg-white rounded-sm text-center`}
     >
       <div className="p-4 bg-neutral-950 rounded-md">{children}</div>
-      {title && <p className="text-neutral-900 pb-2">{title}</p>}
+      {title && <p className="text-neutral-900 pb-2 font-semibold">{title}</p>}
     </div>
   );
 };
