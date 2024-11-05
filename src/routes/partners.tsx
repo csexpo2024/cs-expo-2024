@@ -9,7 +9,7 @@ const Partners = () => {
   const bronze = ["company A", "company B", "company C"];
 
   return (
-    <div className="bg-[#110101] py-10">
+    <div className="bg-[#110101]">
       {/* Hero Section */}
       <section className="flex fade-backdrop justify-end items-center box-pattern px-24 py-36">
         <h1 className="text-6xl font-heading-italic">Our Partners</h1>
