@@ -106,7 +106,7 @@ const Header = () => {
     <NavItem key={link.route} item={link} />
   ));
   return (
-    <header className="flex w-full p-5 px-10 lg:px-24 items-center sticky top-0 bg-white bg-opacity-0 backdrop-blur-md z-50">
+    <header className="flex w-full p-5 px-10 lg:px-24 items-center sticky top-0 bg-white bg-opacity-0 backdrop-blur-md z-[99]">
       <NavLink to="/">
         <img src={LogoSmall} className="w-1/2" />
       </NavLink>
