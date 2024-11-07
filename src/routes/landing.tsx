@@ -78,7 +78,7 @@ const Landing = () => {
               }}
             />
             <motion.img
-              className="absolute min-w-[70vh] md:min-w-[80vh] lg:min-w-[70vh] top-[-20px] left-[-10px] z-10"
+              className="absolute min-w-[80vh] sm:min-w-[65vh] md:min-w-[50vh] lg:min-w-[65vh] top-[-20px] left-[-10px] z-10"
               src={MagnifyingGlass}
               style={{ x: magnifyingGlassX, opacity: magnifyingGlassOpacity }}
             />
@@ -88,10 +88,6 @@ const Landing = () => {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            viewport={{
-              margin: '-200px',
-              amount: 'all'
-            }}
           >
             Unveiling <span className="text-yellow-500">possibilites</span> and
             creating new <span className="text-red-500">realities</span>
@@ -122,7 +118,6 @@ const Landing = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{
-            margin: '-200px',
             once: true
           }}
         >
@@ -142,7 +137,6 @@ const Landing = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{
-            margin: '-200px',
             once: true
           }}
         >
@@ -167,14 +161,13 @@ const Landing = () => {
         }}
         className="bg-opacity-75"
       >
-        <div className="bg-black bg-opacity-40 p-24 h-[80dvh]">
+        <div className="bg-black bg-opacity-40 p-24 min-h-[80dvh]">
           <motion.h1 
             className="font-heading-italic text-6xl text-center pb-20"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{
-              margin: '-200px',
               once: true
             }}
           >
@@ -186,7 +179,6 @@ const Landing = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{
-              margin: '-200px',
               once: true
             }}
           >
