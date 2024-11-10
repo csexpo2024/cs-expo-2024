@@ -54,7 +54,7 @@ const Partners = () => {
         </span>
         <div className="flex flex-col md:flex-row gap-12 justify-center items-center py-10">
           {gold.map((company, i) => (
-            <PolaroidFrame size="lg" key={i} title={company.name}>
+            <PolaroidFrame size="lg" key={i} title={company.name} bold>
               <img src={LogoSilver} alt="Gold Sponsor" className="w-52" />
             </PolaroidFrame>
           ))}
