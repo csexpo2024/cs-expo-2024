@@ -13,6 +13,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 import { useRef } from "react";
 
+import { Link } from "react-router-dom";
+
 const Landing = () => {
   const heroRef = useRef(null);
   const eventsRef = useRef(null);
@@ -111,10 +113,12 @@ const Landing = () => {
             and industry experts, with awards for top innovations. Talks by tech
             leaders will explore current trends and insights.
           </p>
-          <Button className="mt-5">
-            <span>View Event</span>
-            <ExternalLink className="h-6 w-6" />
-          </Button>
+          <Link to="/events/cs-expo">
+            <Button className="mt-5">
+              <span>View Event</span>
+              <ExternalLink className="h-6 w-6" />
+            </Button>
+          </Link>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: -100 }}
@@ -130,10 +134,12 @@ const Landing = () => {
             industry experts to share insights on staying current with tech
             skills and innovation in a fast-evolving field.
           </p>
-          <Button className="mt-5">
-            <span>View Event</span>
-            <ExternalLink className="h-6 w-6" />
-          </Button>
+          <Link to="/events/dev-day">
+            <Button className="mt-5">
+              <span>View Event</span>
+              <ExternalLink className="h-6 w-6" />
+            </Button>
+          </Link>
         </motion.div>
       </section>
       <motion.section
