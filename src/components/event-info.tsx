@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const EventInfo = ({
   title,
   subtitle,
@@ -8,10 +10,18 @@ export const EventInfo = ({
   body: string;
 }) => {
   return (
-    <div className="z-50">
-      <p className="font-heading text-6xl">{title}</p>
+    <motion.div 
+      className="z-50"
+      initial={{ opacity: 0, x: -100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{
+        once: true,
+      }}
+    >
+      <p className="font-heading text-4xl lg:text-6xl">{title}</p>
       <p className="text-yellow-500 uppercase text-xl">{subtitle}</p>
-      <p className="text-lg mt-3 p-2 font-semibold">{body}</p>
-    </div>
+      <p className="text-lg mt-3 font-semibold">{body}</p>
+    </motion.div>
   );
 };
