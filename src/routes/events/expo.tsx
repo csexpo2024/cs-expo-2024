@@ -79,18 +79,25 @@ const Expo = () => {
         <div className="flex flex-col gap-32 p-14 lg:p-44 z-50">
           <EventInfo
             title="CS Expo Day 1"
-            subtitle="November 19, 2024 | 8:00 AM - 5:00 "
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus venenatis diam, ac mattis eros viverra ut. Quisque faucibus mauris a malesuada maximus."
+            subtitle="November 19, 2024 | 8:00 AM - 5:00 PM "
+            body="Join the first day of CS EXPO, as bright fourth year students present their innovative theses with topics regarding data analytics, 
+            health, and natural language processing. Under the data analytics category are groups Agatha, LMNTRX, 
+            and Strawhats. For the health category, Code Geass, Hurtz, Lorem Ipsum, and Samsan. Lastly, for the
+            natural language processing category are the thesis groups Codex, Ctrl Alt Delete, EnSys, Jathro's Matrix, 
+            and LMDIFY."
           />
           <EventInfo
             title="Keynote Talks"
             subtitle="The power of innovation: how technology crafts our daily realities"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus venenatis diam, ac mattis eros viverra ut. Quisque faucibus mauris a malesuada maximus."
+            body="Innovation in technology has become the driving force behind the transformation of our everyday lives.
+            This panel will explore how emerging technologies are shaping modern society, 
+            from the way we work and communciate to how we interact with the world around us. 
+            Our experts will discuss the breakthroughs that are redefining industries, 
+            enhancing human experiences,and solving global challenges."
           />
         </div>
       </motion.section>
       <section className="bg-[#1F0303] relative overflow-x-clip pointer-events-none">
-        {/* TODO: move day number beside last letter (?? need help on this) */}
         <motion.div 
           className="absolute text-black opacity-90 leading-[14rem] lg:leading-[19rem] left-[-10vh] text-[20rem] lg:text-[30rem] font-heading"
           style={{
@@ -104,13 +111,21 @@ const Expo = () => {
         <div className="flex flex-col gap-32 p-14 lg:p-44 z-50">
           <EventInfo
             title="CS Expo Day 2"
-            subtitle="November 19, 2024 | 8:00 AM - 5:00 "
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus venenatis diam, ac mattis eros viverra ut. Quisque faucibus mauris a malesuada maximus."
+            subtitle="November 19, 2024 | 8:00 AM - 5:00 PM "
+            body="Creating breakthroughs for the computer vision category are the groups who will be 
+            presenting for the second day of the CS Expo event. These groups are: Algoriteam, Code, 
+            Computer Science Global Offensive, GIGGA, HUI, IntelliWatch, JLNN, Lambda, Puno ng 
+            Pagmamahal, and Theta."
           />
           <EventInfo
             title="Keynote Talks"
-            subtitle="The power of innovation: how technology crafts our daily realities"
-            body="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus venenatis diam, ac mattis eros viverra ut. Quisque faucibus mauris a malesuada maximus."
+            subtitle="Replacing the irreplaceable: AI's role in crafting new realities"
+            body="As artificial intelligence continues to advance, it's reshaping
+            industries once thought to be driven solely by human creativity and
+            intuition. This keynote delves into AI's transformative role in crafting
+            new realities, from automating complex tasks to enhancing decision-making 
+            processes. Explore the ethical implications, potential risks, and opportunities 
+            as AI moves from augmenting to potentially replacing roles across various fields."
           />
         </div>
       </section>

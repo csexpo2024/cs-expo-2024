@@ -20,7 +20,7 @@ export const EventInfo = ({
       }}
     >
       <p className="font-heading text-4xl lg:text-6xl">{title}</p>
-      <p className="text-yellow-500 uppercase text-xl">{subtitle}</p>
+      <p className="text-yellow-500 uppercase text-xl font-semibold">{subtitle}</p>
       <p className="text-lg mt-3 font-semibold">{body}</p>
     </motion.div>
   );
