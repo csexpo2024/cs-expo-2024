@@ -69,6 +69,11 @@
       @apply shadow-[inset_5px_-20px_80px_25px_rgba(17,1,1,255)];
     }
   }
+  @media (min-width: 250px) {
+    .group-backdrop {
+      @apply shadow-[inset_5px_-20px_80px_95px_rgba(10,10,10,255)];
+    }
+  }
   @font-face {
     font-family: 'Akira-Extended';
     font-style: normal;

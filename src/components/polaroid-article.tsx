@@ -17,9 +17,9 @@ export const PolaroidArticle = ({
 
   return (
     <div
-      className={`flex flex-col ${_reversed} gap-10 lg:px-52 py-5 justify-center min-w-fit`}
+      className={`flex flex-col ${_reversed} gap-10 lg:px-40 py-5 justify-center min-w-fit`}
     >
-      <div className="rotate-3 flex justify-center lg:justify-items-end w-full">
+      <div className="rotate-3 flex justify-center items-center lg:justify-items-end w-full">
         <PolaroidFrame size="lg">
           <img src={imghref} className="w-96" />
         </PolaroidFrame>

@@ -23,7 +23,7 @@ const Expo = () => {
           CS Expo 2024
         </h1>
       </section>
-      <section className="bg-[#1F0303] relative overflow-hidden pointer-events-none">
+      <section className="bg-[#1F0303] relative overflow-x-hidden pointer-events-none md:pb-28">
         <div className="absolute text-black opacity-90 vertical-text">
           <span className="text-[20rem] font-heading">DAY 1</span>
         </div>
@@ -40,8 +40,8 @@ const Expo = () => {
           />
         </div>
       </section>
-      <section className="bg-[#1F0303] relative overflow-hidden pointer-events-none">
-        \{/* TODO: move day number beside last letter (?? need help on this) */}
+      <section className="bg-[#1F0303] relative overflow-x-clip pointer-events-none">
+        {/* TODO: move day number beside last letter (?? need help on this) */}
         <div className="absolute text-black opacity-90 vertical-text">
           <span className="text-[20rem] font-heading">DAY 2</span>
         </div>
@@ -59,7 +59,7 @@ const Expo = () => {
         </div>
       </section>
       <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-24">
-        <h1 className="font-heading text-5xl py-10">Panelists</h1>
+        <h1 className="font-heading text-5xl py-10 z-10">Panelists</h1>
         <Carousel className="w-full max-w-full">
           <CarouselContent>
             {/* TODO: replace with actual content */}
