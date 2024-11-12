@@ -489,17 +489,15 @@ const TeamCard = ({ team }: { team: Team }) => {
       whileHover={{ scale: 1.025 }}
       whileTap={{ scale: 0.975 }}
     >
-      <div className="bg-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-4 my-4">
+      <div className="bg-white bg-opacity-30 backdrop-blur-md rounded-lg shadow-lg p-4 my-4">
       <div className="relative flex justify-center">
         <img src={`/img/team/${sanitizeName(team.name)}.jpg`} alt={team.name} className="w-50 h-auto rounded-lg" />
-        <div className="absolute inset-0 flex items-center justify-center">
-            <div className="absolute bottom-2 left-1 transform translate-x-1/2 w-5 h-5 flex items-center justify-center rounded-sm overflow-hidden bg-white bg-opacity-0">
-              <img src={team.logo} alt="Team Logo" className="max-w-full max-h-full" />
-            </div>
-        </div>
       </div>
         <div className="pt-3">
-          <p className="font-heading-italic text-lg pb-2 uppercase">{team.name}</p>
+            <div className="relative flex justify-center items-center">
+            <p className="font-heading-italic text-lg pb-2 uppercase relative z-10">{team.name}</p>
+            <img src={team.logo} alt="Team Logo" className="absolute right-15 w-15 h-12 object-cover opacity-70" />
+            </div>
         </div>
       </div>
     </motion.div>
