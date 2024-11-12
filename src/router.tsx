@@ -3,7 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Landing from "@/routes/landing";
 import { Layout } from "@/components/layout";
 
-import { Events, Expo, DevDay, Committees } from "@/routes/events";
+import { Events, Expo, DevDay } from "@/routes/events";
 import { ProjectCollection, Project, HallOfFame } from "@/routes/projects";
 import Partners from "@/routes/partners";
 import Gallery from "@/routes/gallery";
@@ -31,10 +31,6 @@ export const router = createBrowserRouter([
       {
         path: "/events/dev-day",
         element: <DevDay />,
-      },
-      {
-        path: "/events/committees",
-        element: <Committees />,
       },
       {
         path: "/projects",
