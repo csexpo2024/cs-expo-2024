@@ -76,7 +76,7 @@ const Project = () => {
           <div className="sm:col-span-3 px-2 z-[100]">
             {/* Header */}
             <div className="flex flex-wrap pb-4 space-y-2 items-end [text-shadow:_0_4px_5px_rgba(0,0,0,0.95)]">
-              <h1 className="text-3xl lg:text-5xl font-heading ">
+              <h1 className="text-3xl lg:text-5xl font-heading break-words max-w-full">
                 {project?.title}
               </h1>
               <div className="flex flex-wrap space-x-2 text-lg pl-2 p-2 [text-shadow:_0_4px_200px_rgba(0,0,0,0.95)]">
