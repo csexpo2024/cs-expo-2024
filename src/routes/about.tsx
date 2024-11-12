@@ -731,7 +731,7 @@ const About = () => {
         <span className="text-yellow-500 text-3xl uppercase">
           22 Bold Ideas, One Shared Vision
         </span>
-        <div className="mt-20 columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 max-w-7xl mx-auto">
+        <div className="mt-20 px-10 columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 max-w-7xl mx-auto">
           {team.map((display, i) => (
             <div key={i} className="avoid-break">
               <TeamCard team={display} />
@@ -957,9 +957,10 @@ const About = () => {
 const TeamCard = ({ team }: { team: Team }) => {
   return (
     <motion.div whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.975 }}>
-      <div className="bg-white bg-opacity-30 backdrop-blur-md rounded-lg shadow-lg p-4 my-4">
+      <div className="bg-white bg-opacity-30 backdrop-blur-md rounded-lg shadow-lg p-4 my-4 hover:border-red-600 hover:border-2">
         <div className="relative flex justify-center">
           <img
+            rel="preload"
             src={`/img/team/${sanitizeName(team.name)}.jpg`}
             alt={team.name}
             className="w-50 h-auto rounded-lg"
@@ -967,7 +968,7 @@ const TeamCard = ({ team }: { team: Team }) => {
         </div>
         <div className="pt-3">
           <div className="relative flex justify-center items-center">
-            <p className="font-heading-italic text-lg pb-2 uppercase relative z-10">
+            <p className="font-heading-italic text-lg pb-2 uppercase relative z-10 [text-shadow:_0_4px_5px_rgba(0,0,0,0.95)]">
               {team.name}
             </p>
             <img
