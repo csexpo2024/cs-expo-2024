@@ -7,6 +7,7 @@ interface Tags {
 interface Project {
     title: string;
     research_title: string;
+    category: string;
     group: string;
     groupid: string;
     description: string;
@@ -18,6 +19,7 @@ interface Project {
 export const projects: Record<string, Project> = {
     "agila": {
         title: "AGILA",
+        category: "data_analytics",
         research_title: "Agila: Employing Knowledge-Based Recommendations in Crime Mapping for Manila City using ARIMA Forecasting Algorithm",
         group: "Agatha",
         groupid: "agatha",
@@ -32,6 +34,7 @@ export const projects: Record<string, Project> = {
     },
     "meowtion": {
         title: "MEOWTION CAPTURE",
+        category: "computer_vision",
         research_title: "Meowtion Capture: Behavioral Analysis for Felines Using Video Processing",
         group: "Algoriteam",
         groupid: "algoriteam",
@@ -45,6 +48,7 @@ export const projects: Record<string, Project> = {
     },
     "mlfds": {
         title: "MLFDS",
+        category: "nlp",
         research_title: "Multi-Layered Fraud Detection System Using Logistic Regression, Random Forests Algorithm, and Naive Bayes Algorithm",
         group: "Chilimansi",
         groupid: "chilimansi",
@@ -58,6 +62,7 @@ export const projects: Record<string, Project> = {
     },
     "fit-vision": {
         title: "FIT VISION",
+        category: "computer_vision",
         research_title: "FitVision: Dumbbell Exercise Posture Assistant Using Convolutional Neural Network",
         group: "Code",
         groupid: "code",
@@ -71,6 +76,7 @@ export const projects: Record<string, Project> = {
     },
     "carident": {
         title: "CARIDENT AI MEDIX",
+        category: "health",
         research_title: "Carident AI Medix: A Convolutional Neural Network for Precise Identification of Dental Caries",
         group: "Code Geass",
         groupid: "codegeass",
@@ -84,6 +90,7 @@ export const projects: Record<string, Project> = {
     },
     "tala": {
         title: "Tala",
+        category: "nlp",
         research_title: "Tala: An Ai-Powered Calendar With OpenAI Using Natural Language Processing and Reinforced Learning",
         group: "Codex",
         groupid: "codex",
@@ -97,6 +104,7 @@ export const projects: Record<string, Project> = {
     },
     "csgo": {
         title: "CSGO System",
+        category: "computer_vision",
         research_title: "A Software Solution For The Foundation Of Congestion Pricing Through License Plate Recognition With Image Adaptive Processing",
         group: "Computer Science Global Offensive",
         groupid: "csgo",
@@ -110,6 +118,7 @@ export const projects: Record<string, Project> = {
     },
     "mimical": {
         title: "Mimical",
+        category: "nlp",
         research_title: "Implementing Machine Learning to Detect and Classify Computer Modified Voice Audio",
         group: "CtrlAltDelete",
         groupid: "ctrlaltdelete",
@@ -123,6 +132,7 @@ export const projects: Record<string, Project> = {
     },
     "ensys-chat": {
         title: "Ensys Chat",
+        category: "nlp",
         research_title: "Enhancing Ai Chatbot For A Human-like Conversation Through Natural Language Processing In Food Services",
         group: "Ensys",
         groupid: "ensys",
@@ -136,6 +146,7 @@ export const projects: Record<string, Project> = {
     },
     "smarteyes": {
         title: "SmartEyes",
+        category: "computer_vision",
         research_title: "Human Detection For Automated Video Tagging Through The Use Of Image Recognition",
         group: "GIGGA",
         groupid: "gigga",
@@ -149,6 +160,7 @@ export const projects: Record<string, Project> = {
     },
     "elixir": {
         title: "Elixir",
+        category: "computer_vision",
         research_title: "Elixir: A Personalized Color Palette Analyzer using Image Processing",
         group: "HUI",
         groupid: "hui",
@@ -162,6 +174,7 @@ export const projects: Record<string, Project> = {
     },
     "onics": {
         title: "Onics",
+        category: "health",
         research_title: "Optimizing Nutritional Intake For College Students: A Decision-based Algorithm Approach To Dish Recommendations",
         group: "Hurtz",
         groupid: "hurtz",
@@ -175,6 +188,7 @@ export const projects: Record<string, Project> = {
     },
     "intelliwatch": {
         title: "Intelliwatch",
+        category: "computer_vision",
         research_title: "IntelliWatch: Advanced Fall Detection and Analysis System with Pose Estimation for Realtime Alerts",
         group: "Intelliwatch",
         groupid: "intelliwatch",
@@ -188,6 +202,7 @@ export const projects: Record<string, Project> = {
     },
     "book-i": {
         title: "Book-I",
+        category: "nlp",
         research_title: "Book-i: An Automated Booking System With Artificial Intelligence Integration And Future Appointment Predictions",
         group: "Jathro's Matrix",
         groupid: "jathros",
@@ -202,6 +217,7 @@ export const projects: Record<string, Project> = {
     "marikit": {
         title: "Marikit",
         research_title: "Enhancing Makeup Recommendations through Face Segmentation and Undertone Analysis using U-Net and Color Analysis",
+        category: "computer_vision",
         group: "JLNN",
         groupid: "jlnn",
         description: "This paper aims at enhancing makeup recommendations byintegrating face segmentation and undertone analysis algorithms.Using the U-Net architecture for face segmentation, facial features are extracted to determine the user’s skin tone accurately. The Monk Skin Tone Scale is then used to classify the skin tone. The algorithms are integrated into a mobile application, enabling realtime virtual try-on of the makeup recommendations. Useracceptability was evaluated via questionnaires aligned with the ISO-25010 quality in use model by thirty (30) third-year students from FEU Tech, fifteen (15) makeup artists, and five (5) IT/CS professionals, ensuring comprehensive feedback from diverse perspectives. The system targets beginner makeup enthusiasts, primarily utilizing cosmetic products from local brands. The theoretical framework include the U-Net architecture for face segmentation, CIELAB color space for undertone analysis, and the Monk skin tone scale for skin tone classification. Results demonstrate the effectiveness of the face segmentation model achieving a mean F1 score of 0.9191 and a Jaccard index of 0.8614, with promising performance in skin extraction and undertone analysis.",
@@ -214,6 +230,7 @@ export const projects: Record<string, Project> = {
     },
     "lambda": {
         title: "Lambda",
+        category: "computer_vision",
         research_title: "Face Detection And Recognition With Behavioral Analysis",
         group: "Lambda",
         groupid: "lambda",
@@ -227,6 +244,7 @@ export const projects: Record<string, Project> = {
     },
     "smart-tasks": {
         title: "SmartTasks",
+        category: "nlp",
         research_title: "Ai-integrated Gmail Assistant Add-on: Task Extraction And Classification Via Natural Language Processing Techniques And Naive Bayes Algorithm",
         group: "LMDIFY",
         groupid: "lmdify",
@@ -240,6 +258,7 @@ export const projects: Record<string, Project> = {
     },
     "visual-sql": {
         title: "VisualSQL",
+        category: "data_analytics",
         research_title: "Visualsql: Visual Programming In Learning Structured Query Language Using Rule- Based Expert System For Detecting Pessimistic Behavior",
         group: "LMNTRX",
         groupid: "lmntrx",
@@ -253,9 +272,10 @@ export const projects: Record<string, Project> = {
     },
     "etbx": {
         title: "ETBX: Express Tuberculosis Buster",
+        category: "health",
         research_title: "ETBx: Express Tuberculosis Buster - An Automated Tuberculosis Screening Software using Convolutional Neural Network",
         group: "Lorem Ipsum",
-        groupid: "loremipsum",
+        groupid: "loremIpsum",
         description: "Tuberculosis (TB) is an infectious lung disease brough about by bacterial infection and is a major cause of death worldwide. Early and accurate screening is essential so it can be treated. To address this problem, the researchers developed an application that detects the presence of TB in Chest X-rays (CXR) images through image pre-processing, data augmentation, image segmentation and deep learning based classification. Online datasets were utilized to train the segmentation and classification model; A total of 704 CXR images were employed to train the U-Net segmentation model and a total of 1148 images were used to train the EfficientNetB3 classifier model. Experiment results have shown that the proposed U-Net model has achieved a recall, F1-score, AUC, accuracy, and precision of 95.04%, 96.17%, 97.07%, 98.07%, and 97.33%respectively. For the EfficientNetB3 model, values of 83%, 83%, 91.68%, 83.33%, and 83% were obtained for recall, F1-score, AUC, accuracy, and precision respectively. The imposition of heatmap over the CXR images through Grad-CAM (Gradient-weighted Class Activation Mapping) has shown insights into the classification model's prediction. The performance of the system was also tested against a radiologist to gauge the degree of agreement using Cohen's Kappa. Using 50 random images from the test dataset, Kappa values of 0.56 and 0.64 between the radiologist and the system at classification threshold levels of 0.4 and 0.6, respectively. The research findings show the screening system’s capability of detecting TB in CXR images as well as itsapplicability in the clinical setting.",
         avp: "",
         tags: {
@@ -266,6 +286,7 @@ export const projects: Record<string, Project> = {
     },
     "pnp": {
         title: "Puno Ng Pagmamahal",
+        category: "computer_vision",
         research_title: "Integrating Machine Learning IntoDrone-Captured Data Analysis: Advancing Watershed Segmentation for End-State Deforestation and Soil Erosion Monitoring",
         group: "PnP",
         groupid: "pnp",
@@ -279,6 +300,7 @@ export const projects: Record<string, Project> = {
     },
     "ultrascan": {
         title: "UltraScan",
+        category: "health",
         research_title: "Utilizing Deep Learning in Ultrasound Images for Fetal Biometry Measurement in Prenatal Assessment",
         group: "Samsan",
         groupid: "samsan",
@@ -292,6 +314,7 @@ export const projects: Record<string, Project> = {
     },
     "smish-x": {
         title: "Smish X",
+        category: "data_analytics",
         research_title: "A Comprehensive Phishing Detection System Using Machine Learning Algorithms",
         group: "Strawhats",
         groupid: "strawhats",
@@ -305,6 +328,7 @@ export const projects: Record<string, Project> = {
     },
     "theta": {
         title: "Theta",
+        category: "computer_vision",
         research_title: "Design And Evaluation Of A Low-cost Security System Using An Orange Pi Zero 3 With Haar Cascade Classifier, Local Binary Pattern Histogram (Lbph), And Background Subtraction Method (Bsm) Algorithms For Intrusion Detection",
         group: "Theta",
         groupid: "theta",
