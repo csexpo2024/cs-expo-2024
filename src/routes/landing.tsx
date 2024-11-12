@@ -108,7 +108,7 @@ const Landing = () => {
           }}
         >
           <h1 className="font-heading-italic text-6xl">CS EXPO</h1>
-          <p className="text-3xl text-muted-foreground max-w-4xl pt-10">
+          <p className="text-xl sm:text-3xl text-muted-foreground max-w-4xl pt-10">
             A two-day event where students showcase their projects to faculty
             and industry experts, with awards for top innovations. Talks by tech
             leaders will explore current trends and insights.
@@ -129,7 +129,7 @@ const Landing = () => {
           }}
         >
           <h1 className="font-heading-italic text-6xl">DEV DAY</h1>
-          <p className="text-3xl text-muted-foreground max-w-4xl pt-10">
+          <p className="text-xl sm:text-3xl text-muted-foreground max-w-4xl pt-10">
             Following CS Expo 2024 on November 22, Dev Day brings together
             industry experts to share insights on staying current with tech
             skills and innovation in a fast-evolving field.
