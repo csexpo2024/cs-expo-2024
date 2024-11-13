@@ -100,8 +100,13 @@ const Footer = () => {
       <div className="bg-neutral-800 p-[0.5px] my-10" />
       <div className="flex justify-between items-center px-32">
         <div className="flex gap-5">
-          <Facebook className="h-10 w-10" />
-          <Instagram className="h-10 w-10" />
+          <a
+            href="https://www.facebook.com/csexpo2024"
+            target="_blank"
+            rel="norefferer noopener"
+          >
+            <Facebook className="h-10 w-10" />
+          </a>
         </div>
         <p>2024</p>
       </div>
