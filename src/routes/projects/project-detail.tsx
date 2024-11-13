@@ -16,9 +16,8 @@ import CautionTapeGroup from "@/assets/img/caution-tape-shadowed.png";
 
 import { PolaroidFrame } from "@/components/polaroid-frame";
 
-/* TODO
- * Update for gallery
- */
+import { Photo } from "@/constants/projects";
+
 const Project = () => {
   const { projectid } = useParams<{ projectid: string }>();
 
@@ -44,10 +43,19 @@ const Project = () => {
     };
   }, []);
 
-  const gallery = [
-    "https://preview.redd.it/e54t88z9l2p71.jpg?width=640&crop=smart&auto=webp&s=471982e45741e3afeb0e03c4c48166b092ce1494",
-    "https://preview.redd.it/ybi78y1al2p71.jpg?width=640&crop=smart&auto=webp&s=5fd43ab51ad7b71a084cdaf9971e79144bf557bf",
-    "https://dbkpop.com/wp-content/uploads/2021/09/aespa_savage_teaser_hallucination_quest_1_ningning_1.jpg",
+  const _gallery = [
+    {
+      name: "ningning",
+      url: "https://preview.redd.it/e54t88z9l2p71.jpg?width=640&crop=smart&auto=webp&s=471982e45741e3afeb0e03c4c48166b092ce1494",
+    },
+    {
+      name: "ningning",
+      url: "https://preview.redd.it/ybi78y1al2p71.jpg?width=640&crop=smart&auto=webp&s=5fd43ab51ad7b71a084cdaf9971e79144bf557bf",
+    },
+    {
+      name: "ningning",
+      url: "https://dbkpop.com/wp-content/uploads/2021/09/aespa_savage_teaser_hallucination_quest_1_ningning_1.jpg",
+    },
   ];
 
   const project = projectid ? data[projectid.toLowerCase()] : null;
@@ -163,13 +171,13 @@ const Project = () => {
               </span>
             </h3>
             <div className="w-full px-10">
-              <Gallery images={gallery} />
+              <Gallery images={project.gallery ?? _gallery} />
             </div>
           </div>
         </div>
       </div>
       {/* Caution Tape Footer */}
-      <div className="h-56 overflow-hidden">
+      <div className="h-56 overflow-hidden pointer-events-none">
         <img
           src={CautionTapeGroup}
           alt="Caution Tape"
@@ -209,7 +217,7 @@ const Avp = ({ link }: { link: string }) => {
   );
 };
 
-const Gallery = ({ images }: { images: string[] }) => {
+const Gallery = ({ images }: { images: Photo[] }) => {
   return (
     <Carousel
       opts={{
@@ -219,12 +227,12 @@ const Gallery = ({ images }: { images: string[] }) => {
       <CarouselContent>
         {images.map((image, i) => (
           <CarouselItem key={i}>
-            <div className="flex justify-center items-center">
-              <PolaroidFrame size="lg" nonPadded>
+            <div className="flex justify-center items-center h-full">
+              <PolaroidFrame size="lg" nonPadded title={image.name}>
                 <img
-                  src={image}
+                  src={image.url}
                   alt=""
-                  className="w-full h-96 object-contain"
+                  className="w-full max-h-96 object-contain"
                 />
               </PolaroidFrame>
             </div>

@@ -1,3 +1,8 @@
+export interface Photo {
+    name: string;
+    url: string;
+}
+
 interface Tags {
     members: string[];
     mentor: string[];
@@ -13,6 +18,7 @@ interface Project {
     description: string;
     avp: string;
     tags?: Tags;
+    gallery?: Photo[];
 }
 
 /* TODO: fill avp link */
@@ -29,8 +35,33 @@ export const projects: Record<string, Project> = {
             members: ["Pacheco, Samuel Jacob", "Perez, Cyra Shane", "Signo, John Benedict", "Wong, Ella Belle"],
             mentor: ["DIT. Angelo C. Arguson"],
             concepts: ["Crime Forecasting", "ARIMA Model", "Knowledge-Based Recommendations"]
-        }
-       
+        },
+        gallery: [
+            {
+                name: "Agatha",
+                url: "/img/gallery/agatha/agatha-group-2.jpg"
+            },
+            {
+                name: "Agatha",
+                url: "/img/gallery/agatha/agatha-group-1.jpg"
+            },
+            {
+                name: "Samuel Jacob Pacheco",
+                url: "/img/gallery/agatha/pacheco.jpg"
+            },
+            {
+                name: "Cyra Shane Perez",
+                url: "/img/gallery/agatha/perez.jpg"
+            },
+            {
+                name: "John Benedict Signo",
+                url: "/img/gallery/agatha/signo.jpg"
+            },
+            {
+                name: "Ella Belle Wong",
+                url: "/img/gallery/agatha/wong.jpg"
+            }
+        ]
     },
     "meowtion": {
         title: "MEOWTION CAPTURE",
@@ -44,7 +75,29 @@ export const projects: Record<string, Project> = {
             members: ["Cudiamat, Angeline C.", "Dolot, Daf C.", "Rasonanble, Ana Mary Colin"],
             mentor: ["Abraham T. Magpantay"],
             concepts: ["A.I.", "CNN", "YOLO", "Remote Pet Monitoring"],
-        }
+        },
+        gallery: [
+            {
+                name: "Algoriteam",
+                url: "/img/gallery/algoriteam/algoriteam-group-1.jpg"
+            },
+            {
+                name: "Algoriteam",
+                url: "/img/gallery/algoriteam/algoriteam-group-2.jpg"
+            },
+            {
+                name: "Angeline Cudiamat",
+                url: "/img/gallery/algoriteam/cudiamat.jpg"
+            },
+            {
+                name: "Daf Dolot",
+                url: "/img/gallery/algoriteam/dolot.jpg"
+            },
+            {
+                name: "Ana Mary Colin Rasonable",
+                url: "/img/gallery/algoriteam/rasonable.jpg"
+            }
+        ]
     },
     "mlfds": {
         title: "MLFDS",
@@ -58,7 +111,7 @@ export const projects: Record<string, Project> = {
             members: ["Atkinson, Andrei V.", "Gaaloul, Amir S.", "Mulsid, Elizabeth Louise I.", "Valenciado, Jeremiah", "Vasquez, Aaron John S."],
             mentor: ["Abraham T. Magpantay"],
             concepts: ["Fraud Detection", "MLFDS", "Machine Learning", "Cybersecurity", "privacy"],
-        }
+        },
     },
     "fit-vision": {
         title: "FIT VISION",
@@ -72,7 +125,33 @@ export const projects: Record<string, Project> = {
             members: ["Del Rosario, Rhiel John T.", "Buenaobra, Kyla Beatrice R.", "Dela Cruz, Luis Miguel C.", "Vecine, Dickson R."],
             mentor: ["Reginald Cheng"],
             concepts: ["Neural Networks", "Convolutional networks"],
-        }
+        },
+        gallery: [
+            {
+                name: "Code",
+                url: "/img/gallery/code/code-group-1.jpg"
+            },
+            {
+                name: "Code",
+                url: "/img/gallery/code/code-group-2.jpg"
+            },
+            {
+                name: "Rhiel John T. Del Rosario",
+                url: "/img/gallery/code/rosario.jpg"
+            },
+            {
+                name: "Kyla Beatrice R. Buenaobra",
+                url: "/img/gallery/code/buenaobra.jpg"
+            },
+            {
+                name: "Luis Miguel C. Dela Cruz",
+                url: "/img/gallery/code/delacruz.jpg"
+            },
+            {
+                name: "Dickson R. Vecina",
+                url: "/img/gallery/code/vecina.jpg"
+            }
+        ]
     },
     "carident": {
         title: "CARIDENT AI MEDIX",
@@ -86,7 +165,33 @@ export const projects: Record<string, Project> = {
             members: ["Ordonez, Kendric", "Babasa, Victoria Faye", "Camasura, Jasmine", "Manarang, Geryko"],
             mentor: ["Dr. Hadji Tejuco"],
             concepts: ["Dental Caries","A.I.", "Computer Vision", "Object Detection"]
-        }
+        },
+        gallery: [
+            {
+                name: "Code Geass",
+                url: "/img/gallery/codegeass/codegeass-group-1.jpg"
+            },
+            {
+                name: "Code Geass",
+                url: "/img/gallery/codegeass/codegeass-group-2.jpg"
+            },
+            {
+                name: "Kendric Ordonez",
+                url: "/img/gallery/codegeass/ordonez.jpg"
+            },
+            {
+                name: "Victoria Faye Babasa",
+                url: "/img/gallery/codegeass/babasa.jpg"
+            },
+            {
+                name: "Jasmine Camasura",
+                url: "/img/gallery/codegeass/camasura.jpg"
+            },
+            {
+                name: "Geryko Manarang",
+                url: "/img/gallery/codegeass/manarang.jpg"
+            }
+        ]
     },
     "tala": {
         title: "Tala",
@@ -100,7 +205,33 @@ export const projects: Record<string, Project> = {
             members: ["Pineda, Joshua Renniel A.", "Abiog, Gabriel P.", "Aguillon, John Rey Luis", "Ebina, Reuben Joseph H."],
             mentor: ["May Florence D. San Pablo"],
             concepts: ["A.I.", "Natural Language Processing", "Machine Learning", "Reinforced Learning"],
-        }
+        },
+        gallery: [
+            {
+                name: "Codex",
+                url: "/img/gallery/codex/codex-group-1.jpg"
+            },
+            {
+                name: "Codex",
+                url: "/img/gallery/codex/codex-group-2.jpg"
+            },
+            {
+                name: "Joshua Renniel A. Pineda",
+                url: "/img/gallery/codex/pineda.jpg"
+            },
+            {
+                name: "Gabriel P. Abiog",
+                url: "/img/gallery/codex/abiog.jpg"
+            },
+            {
+                name: "John Rey Luis Aguillon",
+                url: "/img/gallery/codex/aguillon.jpg"
+            },
+            {
+                name: "Reuben Joseph H. Ebina",
+                url: "/img/gallery/codex/ebina.jpg"
+            }
+        ]
     },
     "csgo": {
         title: "CSGO System",
@@ -114,7 +245,33 @@ export const projects: Record<string, Project> = {
             members: ["Mendoza, Alexander D.","Pagtalunan, John Gabriel T.","RayRay, Kassandra Beatriz B.","Roa, Adriane Gil S.",],
             mentor: ["Elisa V. Malasaga"],
             concepts: ["Congestion Pricing", "YoloV8", "Image Processing", "OCR", "Traffic Management"],
-        }
+        },
+        gallery: [
+            {
+                name: "CSGO",
+                url: "/img/gallery/csgo/csgo-group-1.jpg"
+            },
+            {
+                name: "CSGO",
+                url: "/img/gallery/csgo/csgo-group-2.jpg"
+            },
+            {
+                name: "Alexander D. Mendoza",
+                url: "/img/gallery/csgo/mendoza.jpg"
+            },
+            {
+                name: "John Gabriel T. Pagtalunan",
+                url: "/img/gallery/csgo/pagtalunan.jpg"
+            },
+            {
+                name: "Kassandra Beatriz B. RayRay",
+                url: "/img/gallery/csgo/rayray.jpg"
+            },
+            {
+                name: "Adriane Gil S. Roa",
+                url: "/img/gallery/csgo/roa.jpg"
+            }
+        ]
     },
     "mimical": {
         title: "Mimical",
@@ -128,7 +285,29 @@ export const projects: Record<string, Project> = {
             members: ["Atun, Emmanuel", "Bada, Christian", "Thomas, Manuel"],
             mentor: [],
             concepts: ["Anomaly Detection", "Neural Networks", "Biometrics"],
-        }
+        },
+        gallery: [
+            {
+                name: "CtrlAltDelete",
+                url: "/img/gallery/ctrlaltdelete/ctrlaltdelete-group-1.jpg"
+            },
+            {
+                name: "CtrlAltDelete",
+                url: "/img/gallery/ctrlaltdelete/ctrlaltdelete-group-2.jpg"
+            },
+            {
+                name: "Emmanuel Atun",
+                url: "/img/gallery/ctrlaltdelete/atun.jpg"
+            },
+            {
+                name: "Christian Bada",
+                url: "/img/gallery/ctrlaltdelete/bada.jpg"
+            },
+            {
+                name: "Manuel Thomas",
+                url: "/img/gallery/ctrlaltdelete/thomas.jpg"
+            }
+        ]
     },
     "ensys-chat": {
         title: "Ensys Chat",
@@ -142,7 +321,33 @@ export const projects: Record<string, Project> = {
             members: ["Galura, Ywan Scazi D.C.", "Lobaton, Reannah Ruth G.", "Monje, Marie Kristela Frances", "Ruado, Caila Jenine O."],
             mentor: ["Reginald S. Cheng"],
             concepts: ["A.I.", "Empathic Computing", "Chatbot", "Sentiment Analysis", "Natural Language Processing", "Customer Service"],
-        }
+        },
+        gallery: [
+            {
+                name: "Ensys",
+                url: "/img/gallery/ensys/ensys-group-1.jpg"
+            },
+            {
+                name: "Ensys",
+                url: "/img/gallery/ensys/ensys-group-2.jpg"
+            },
+            {
+                name: "Ywan Scazi D.C. Galura",
+                url: "/img/gallery/ensys/galura.jpg"
+            },
+            {
+                name: "Reannah Ruth G. Lobaton",
+                url: "/img/gallery/ensys/lobaton.jpg"
+            },
+            {
+                name: "Marie Kristela Frances Monje",
+                url: "/img/gallery/ensys/monje.jpg"
+            },
+            {
+                name: "Caila Jenine O. Ruado",
+                url: "/img/gallery/ensys/ruado.jpg"
+            }
+        ]
     },
     "smarteyes": {
         title: "SmartEyes",
@@ -156,7 +361,29 @@ export const projects: Record<string, Project> = {
             members: ["Menguito, Jericho L.", "Longcop, Eddie F.", "Lantajo Jr., Gregorio B."],
             mentor: ["Abraham T. Magpantay"],
             concepts: ["A.I.", "Object Detection", "Compution Vision Problems", "Object Identification"],
-        }
+        },
+        gallery: [
+            {
+                name: "GIGGA",
+                url: "/img/gallery/gigga/gigga-group-1.jpg"
+            },
+            {
+                name: "GIGGA",
+                url: "/img/gallery/gigga/gigga-group-2.jpg"
+            },
+            {
+                name: "Jericho L. Menguito",
+                url: "/img/gallery/gigga/menguito.jpg"
+            },
+            {
+                name: "Eddie F. Longcop",
+                url: "/img/gallery/gigga/longcop.jpg"
+            },
+            {
+                name: "Gregorio B. Lantajo Jr.",
+                url: "/img/gallery/gigga/lantajo.jpg"
+            }
+        ]
     },
     "elixir": {
         title: "Elixir",
@@ -170,7 +397,29 @@ export const projects: Record<string, Project> = {
             members: ["Bajaro, Clarissa M.", "Rosendo, Janna Rane C.", "Vicio, Shahani Fe D."],
             mentor: ["Justine Jude Pura"],
             concepts: ["Image Processing", "Facial Segmentation", "Computer Vision", "Object Detection"],
-        }
+        },
+        gallery: [
+            {
+                name: "HUI",
+                url: "/img/gallery/hui/hui-group-1.png"
+            },
+            {
+                name: "HUI",
+                url: "/img/gallery/hui/hui-group-2.jpg"
+            },
+            {
+                name: "Clarissa M. Bajaro",
+                url: "/img/gallery/hui/bajaro.jpg"
+            },
+            {
+                name: "Janna Rane C. Rosendo",
+                url: "/img/gallery/hui/rosendo.jpg"
+            },
+            {
+                name: "Shahani Fe D. Vicio",
+                url: "/img/gallery/hui/vicio.jpg"
+            }
+        ]
     },
     "onics": {
         title: "Onics",
@@ -184,7 +433,33 @@ export const projects: Record<string, Project> = {
             members: ["Bulot, Justin Matthew C.", "Raymundo, Glen Daniell F.", "Rosal, Zuphia M.", "Serrano, Albert Kobe C."],
             mentor: ["Dr. Hadji Tejuco"],
             concepts: ["Machine Learning", "Machine Learning Approaches", "Classification and Regression Trees"],
-        }
+        },
+        gallery: [
+            {
+                name: "Hurtz",
+                url: "/img/gallery/hurtz/hurtz-group-1.jpg"
+            },
+            {
+                name: "Hurtz",
+                url: "/img/gallery/hurtz/hurtz-group-2.jpg"
+            },
+            {
+                name: "Justin Matthew C. Bulot",
+                url: "/img/gallery/hurtz/bulot.jpg"
+            },
+            {
+                name: "Glen Daniell F. Raymundo",
+                url: "/img/gallery/hurtz/raymundo.jpg"
+            },
+            {
+                name: "Zuphia M. Rosal",
+                url: "/img/gallery/hurtz/rosal.jpg"
+            },
+            {
+                name: "Albert Kobe C. Serrano",
+                url: "/img/gallery/hurtz/serrano.jpg"
+            }
+        ]
     },
     "intelliwatch": {
         title: "Intelliwatch",
@@ -198,7 +473,33 @@ export const projects: Record<string, Project> = {
             members: ["Escario, Earl Rodney N.", "Francisco, Juan Carlos S.", "Simbulan, Ian Angelo M.", "Supleo, Cyfer Nikolai"],
             mentor: ["Abraham T. Magpantay"],
             concepts: ["A.I.", "Computer Vision", "Fall Detection", "Pose Estimation", "Real-time Alerts"],
-        }
+        },
+        gallery: [
+            {
+                name: "Intelliwatch",
+                url: "/img/gallery/intelliwatch/intelliwatch-group-1.jpg"
+            },
+            {
+                name: "Intelliwatch",
+                url: "/img/gallery/intelliwatch/intelliwatch-group-2.jpg"
+            },
+            {
+                name: "Earl Rodney N. Escario",
+                url: "/img/gallery/intelliwatch/escario.jpg"
+            },
+            {
+                name: "Juan Carlos S. Francisco",
+                url: "/img/gallery/intelliwatch/francisco.jpg"
+            },
+            {
+                name: "Ian Angelo M. Simbulan",
+                url: "/img/gallery/intelliwatch/simbulan.jpg"
+            },
+            {
+                name: "Cyfer Nikolai Supleo",
+                url: "/img/gallery/intelliwatch/supleo.jpg"
+            }
+        ]
     },
     "book-i": {
         title: "Book-I",
@@ -212,7 +513,33 @@ export const projects: Record<string, Project> = {
             members: ["Roxas, Jethro Emmanuel C.", "Jestingor, Near Tracy D.", "Jimeno, Eymard Julian S.", "Nadonga, Henrick Brian M."],
             mentor: ["Hadji J. Tejuco"],
             concepts: ["A.I", "Algorithm", "Natural Language Processing", "Machine Learning"],
-        }
+        },
+        gallery: [
+            {
+                name: "Jathro's Matrix",
+                url: "/img/gallery/jathrosmatrix/jathrosmatrix-group-1.jpg"
+            },
+            {
+                name: "Jathro's Matrix",
+                url: "/img/gallery/jathrosmatrix/jathrosmatrix-group-2.jpg"
+            },
+            {
+                name: "Jethro Emmanuel C. Roxas",
+                url: "/img/gallery/jathrosmatrix/roxas.jpg"
+            },
+            {
+                name: "Near Tracy D. Jestingor",
+                url: "/img/gallery/jathrosmatrix/jestingor.jpg"
+            },
+            {
+                name: "Eymard Julian S. Jimeno",
+                url: "/img/gallery/jathrosmatrix/jimeno.jpg"
+            },
+            {
+                name: "Henrick Brian M. Nadonga",
+                url: "/img/gallery/jathrosmatrix/nadonga.jpg"
+            }
+        ]
     },
     "marikit": {
         title: "Marikit",
@@ -226,7 +553,33 @@ export const projects: Record<string, Project> = {
             members: ["Macaldo, Noah Paolo L.", "Feticio, Lance Benedict F.", "Potenciano, Noah Angelo M.", "Seno, Daniel Jude R."],
             mentor: ["Mr. Jennifer A. Sabonsolin"],
             concepts: ["Makeup", "U-Net Architecture", "Color Analysis", "Face Segmentation", "Skin Tone"],
-        }
+        },
+        gallery: [
+            {
+                name: "JLNN",
+                url: "/img/gallery/jlnn/jlnn-group-1.jpg"
+            },
+            {
+                name: "JLNN",
+                url: "/img/gallery/jlnn/jlnn-group-2.jpg"
+            },
+            {
+                name: "Noah Paolo L. Macaldo",
+                url: "/img/gallery/jlnn/macaldo.jpg"
+            },
+            {
+                name: "Lance Benedict F. Feticio",
+                url: "/img/gallery/jlnn/feticio.jpg"
+            },
+            {
+                name: "Noah Angelo M. Potenciano",
+                url: "/img/gallery/jlnn/potenciano.jpg"
+            },
+            {
+                name: "Daniel Jude R. Seno",
+                url: "/img/gallery/jlnn/seno.jpg"
+            }
+        ]
     },
     "lambda": {
         title: "Lambda",
@@ -240,7 +593,29 @@ export const projects: Record<string, Project> = {
             members: ["Borja, Christian Jay G.", "John Alvin R. Cruz", "Kingra, Ramandeep S."],
             mentor: ["Jennifer A. Sabonsolin"],
             concepts: ["Face Detection", "Face Recogniton", "Door Lock System", "Deep Learning", "Pose Estimation"],
-        }
+        },
+        gallery: [
+            {
+                name: "Lambda",
+                url: "/img/gallery/lambda/lambda-group-1.jpg"
+            },
+            {
+                name: "Lambda",
+                url: "/img/gallery/lambda/lambda-group-2.jpg"
+            },
+            {
+                name: "Christian Jay G. Borja",
+                url: "/img/gallery/lambda/borja.jpg"
+            },
+            {
+                name: "John Alvin R. Cruz",
+                url: "/img/gallery/lambda/cruz.jpg"
+            },
+            {
+                name: "Ramandeep S. Kingra",
+                url: "/img/gallery/lambda/kingra.jpg"
+            }
+        ]
     },
     "smart-tasks": {
         title: "SmartTasks",
@@ -254,7 +629,33 @@ export const projects: Record<string, Project> = {
             members: ["Ancieto, Laurenz Lhynt A.", "Gueverra, Isaiah Ezekiel E.", "Molina, Arjen Catherine P.", "Santiago, Carl I."],
             mentor: ["Reginad S. Cheng"],
             concepts: ["A.I Integrated Gmail Assistant", "Natural Language Processing", "Naive Byes Algorithm", "Productivity"],
-        }
+        },
+        gallery: [
+            {
+                name: "LMDIFY",
+                url: "/img/gallery/lmdify/lmdify-group-1.jpg"
+            },
+            {
+                name: "LMDIFY",
+                url: "/img/gallery/lmdify/lmdify-group-2.jpg"
+            },
+            {
+                name: "Laurenz Lhynt A. Ancieto",
+                url: "/img/gallery/lmdify/ancieto.jpg"
+            },
+            {
+                name: "Isaiah Ezekiel E. Gueverra",
+                url: "/img/gallery/lmdify/gueverra.jpg"
+            },
+            {
+                name: "Arjen Catherine P. Molina",
+                url: "/img/gallery/lmdify/molina.jpg"
+            },
+            {
+                name: "Carl I. Santiago",
+                url: "/img/gallery/lmdify/santiago.jpg"
+            }
+        ]
     },
     "visual-sql": {
         title: "VisualSQL",
@@ -268,7 +669,37 @@ export const projects: Record<string, Project> = {
             members: ["Dimla, Audi Enrico L.", "Limpin, Janry Enrique O,", "Majarais, David Roy G,", "Miraflor, Ruzzel Mary T.", "Radam, Moira Gabrielle L."],
             mentor: ["Reginal S. Cheng"],
             concepts: ["Intelligent Tutoring System", "SQL Learning", "Pessimistic Behavior Detection", "Convolutional Neural Networks"],
-        }
+        },
+        gallery: [
+            {
+                name: "LMNTRX",
+                url: "/img/gallery/lmntrx/lmntrx-group-2.jpg"
+            },
+            {
+                name: "LMNTRX",
+                url: "/img/gallery/lmntrx/lmntrx-group-1.jpg"
+            },
+            {
+                name: "Audi Enrico L. Dimla",
+                url: "/img/gallery/lmntrx/dimla.jpg"
+            },
+            {
+                name: "Janry Enrique O. Limpin",
+                url: "/img/gallery/lmntrx/limpin.jpg"
+            },
+            {
+                name: "David Roy G. Majarais",
+                url: "/img/gallery/lmntrx/majarais.jpg"
+            },
+            {
+                name: "Ruzzel Mary T. Miraflor",
+                url: "/img/gallery/lmntrx/miraflor.jpg"
+            },
+            {
+                name: "Moira Gabrielle L. Radam",
+                url: "/img/gallery/lmntrx/radam.jpg"
+            }
+        ]
     },
     "etbx": {
         title: "ETBX: Express Tuberculosis Buster",
@@ -282,7 +713,33 @@ export const projects: Record<string, Project> = {
             members: ["Gernale, Paul Adrian T.", "Gruspe, Seth G.", "Rodriguez, Jasper David A.", "Salvatierra, Venz Rebber A."],
             mentor: ["Mr. Anthony D. Aquino"],
             concepts: ["Tuberculosis", "Segmentation", "Heatmap", "Chest X-Ray", "CNN"],
-        }
+        },
+        gallery: [
+            {
+                name: "Lorem Ipsum",
+                url: "/img/gallery/loremipsum/loremipsum-group-1.jpg"
+            },
+            {
+                name: "Lorem Ipsum",
+                url: "/img/gallery/loremipsum/loremipsum-group-2.jpg"
+            },
+            {
+                name: "Paul Adrian T. Gernale",
+                url: "/img/gallery/loremipsum/gernale.jpg"
+            },
+            {
+                name: "Seth G. Gruspe",
+                url: "/img/gallery/loremipsum/gruspe.jpg"
+            },
+            {
+                name: "Jasper David A. Rodriguez",
+                url: "/img/gallery/loremipsum/rodriguez.jpg"
+            },
+            {
+                name: "Venz Rebber A. Salvatierra",
+                url: "/img/gallery/loremipsum/salvatierra.jpg"
+            }
+        ]
     },
     "pnp": {
         title: "Puno Ng Pagmamahal",
@@ -296,7 +753,29 @@ export const projects: Record<string, Project> = {
             members: ["Chuegan, Francis L.", "Cruz, Sean Archer O.", "Torres, Rylan Cedric E."],
             mentor: ["Abraham T. Magpantay"],
             concepts: ["Image Processing", "Machine Learning", "Forestry", "Drones", "UAVs", "YOLOv8", "Geometric Operation"],
-        }
+        },
+        gallery: [
+            {
+                name: "PnP",
+                url: "/img/gallery/pnp/pnp-group-1.jpg"
+            },
+            {
+                name: "PnP",
+                url: "/img/gallery/pnp/pnp-group-2.jpg"
+            },
+            {
+                name: "Francis L. Chuegan",
+                url: "/img/gallery/pnp/chuegan.jpg"
+            },
+            {
+                name: "Sean Archer O. Cruz",
+                url: "/img/gallery/pnp/cruz.jpg"
+            },
+            {
+                name: "Rylan Cedric E. Torres",
+                url: "/img/gallery/pnp/torres.jpg"
+            }
+        ]
     },
     "ultrascan": {
         title: "UltraScan",
@@ -310,7 +789,29 @@ export const projects: Record<string, Project> = {
             members: ["Umali, Kayla Denise L.", "Facto, Jhon Carlo P.", "Tan, Eleazar"],
             mentor: ["Dr. Beau Gray M. Habal"],
             concepts: ["Algorithms", "Link Net", "Image Processing", "Fetal Ultrasound Image"],
-        }
+        },
+        gallery: [
+            {
+                name: "Samsan",
+                url: "/img/gallery/samsan/samsan-group-1.jpg"
+            },
+            {
+                name: "Samsan",
+                url: "/img/gallery/samsan/samsan-group-2.jpg"
+            },
+            {
+                name: "Kayla Denise L. Umali",
+                url: "/img/gallery/samsan/umali.jpg"
+            },
+            {
+                name: "Jhon Carlo P. Facto",
+                url: "/img/gallery/samsan/facto.jpg"
+            },
+            {
+                name: "Eleazar Tan",
+                url: "/img/gallery/samsan/tan.jpg"
+            }
+        ]
     },
     "smish-x": {
         title: "Smish X",
@@ -324,7 +825,33 @@ export const projects: Record<string, Project> = {
             members: ["Villapando, Jonner D.", "Manzano, Giro B.", "Guiang, Albert Dominic M.", "Del Puerto, Crezza Mae O."],
             mentor: ["Elisa V. Malasaga"],
             concepts: ["Machine Learning", "Ensemble Algorithm", "Phishing Detection", "Data Aggregation"],
-        }
+        },
+        gallery: [
+            {
+                name: "Strawhats",
+                url: "/img/gallery/strawhats/strawhats-group-1.jpg"
+            },
+            {
+                name: "Strawhats",
+                url: "/img/gallery/strawhats/strawhats-group-2.jpg"
+            },
+            {
+                name: "Jonner D. Villapando",
+                url: "/img/gallery/strawhats/villapando.jpg"
+            },
+            {
+                name: "Giro B. Manzano",
+                url: "/img/gallery/strawhats/manzano.jpg"
+            },
+            {
+                name: "Albert Dominic M. Guiang",
+                url: "/img/gallery/strawhats/guiang.jpg"
+            },
+            {
+                name: "Crezza Mae O. Del Puerto",
+                url: "/img/gallery/strawhats/delpuerto.jpg"
+            }
+        ]
     },
     "theta": {
         title: "Theta",
@@ -338,6 +865,28 @@ export const projects: Record<string, Project> = {
             members: ["Añonuevo, Carlo Jan Harry S.", "Difuntorum, Mar-con Prince Owen", "Cabontocan, Charles Adrian M."],
             mentor: ["Jennifer A Sabonsolin"],
             concepts: ["Intrusion Detection", "Orange Pi Zero 3", "Haar Cascade Classifier", "Motion Detection", "Real-Time Surveillance"],
-        }
+        },
+        gallery: [
+            {
+                name: "Theta",
+                url: "/img/gallery/theta/theta-group-1.jpg"
+            },
+            {
+                name: "Theta",
+                url: "/img/gallery/theta/theta-group-2.jpg"
+            },
+            {
+                name: "Carlo Jan Harry S. Añonuevo",
+                url: "/img/gallery/theta/anonuevo.jpg"
+            },
+            {
+                name: "Mar-con Prince Owen Difuntorum",
+                url: "/img/gallery/theta/difuntorum.jpg"
+            },
+            {
+                name: "Charles Adrian M. Cabontocan",
+                url: "/img/gallery/theta/cabontocan.jpg"
+            }
+        ]
     },
 }
