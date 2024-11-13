@@ -119,7 +119,7 @@ const Header = () => {
   return (
     <header className="flex w-full p-5 px-10 lg:px-24 items-center sticky top-0 bg-white bg-opacity-0 backdrop-blur-md z-[99]">
       <NavLink to="/">
-        <img src={LogoSmall} className="w-1/2" />
+        <img src={LogoSmall} className="w-1/3 sm:w-1/2" />
       </NavLink>
       <nav className="ml-auto hidden lg:flex gap-3">
         {navLinks}
