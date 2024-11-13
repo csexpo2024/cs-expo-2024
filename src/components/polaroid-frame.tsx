@@ -31,9 +31,9 @@ const PolaroidFrame = ({
       </div>
       {title && (
         <p
-          className={`text-neutral-900 pb-2 ${bold && "font-heading-italic"} ${
-            _size[2]
-          }`}
+          className={`text-neutral-900 pb-2 ${
+            bold ? "font-heading-italic" : "font-content"
+          } ${_size[2]}`}
         >
           {title}
         </p>
