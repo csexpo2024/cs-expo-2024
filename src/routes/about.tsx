@@ -726,9 +726,11 @@ const About = () => {
         </div>
       </section>
       {/* The Visionary Teams */}
-      <section className="text-center box-pattern py-20">
-        <h2 className="font-heading text-5xl">The Visionary Teams</h2>
-        <span className="text-yellow-500 text-3xl uppercase">
+      <section id="teams" className="text-center box-pattern py-20">
+        <h2 className="font-heading text-3xl sm:text-5xl">
+          The Visionary Teams
+        </h2>
+        <span className="text-yellow-500 text-xl sm:text-3xl uppercase">
           22 Bold Ideas, One Shared Vision
         </span>
         <div className="mt-20 px-10 columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 max-w-7xl mx-auto">
@@ -760,13 +762,13 @@ const About = () => {
         </div>
       </section>
       {/* Organizing Committees */}
-      <section className="text-center py-0">
+      <section id="committees" className="text-center py-0">
         <div className="bg-[#110101] min-h-screen flex flex-col items-center justify-center box-pattern p-4">
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="font-heading text-5xl mb-2 mt-20 text-white"
+            className="font-heading text-4xl sm:text-5xl mb-2 mt-20 text-white"
           >
             Organizing Committees
           </motion.h2>
@@ -879,7 +881,7 @@ const About = () => {
         </div>
       </section>
       {/* Faculty */}
-      <section className="text-center py-0">
+      <section id="faculty" className="text-center py-0">
         <div className="bg-[#110101] min-h-screen flex flex-col items-center justify-center box-pattern p-4">
           <motion.h2
             initial={{ opacity: 0, y: -50 }}
