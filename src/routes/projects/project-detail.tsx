@@ -10,7 +10,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import CautionTapeGroup from "@/assets/img/caution-tape-shadowed.png";
 
@@ -22,7 +22,27 @@ import { PolaroidFrame } from "@/components/polaroid-frame";
 const Project = () => {
   const { projectid } = useParams<{ projectid: string }>();
 
+  const [isTruncated, setIsTruncated] = useState(false);
   const [showMore, setShowMore] = useState(false);
+
+  const ref = useRef<HTMLParagraphElement>(null);
+
+  useEffect(() => {
+    const observer = new ResizeObserver(() => {
+      if (ref.current) {
+        setIsTruncated(ref.current.scrollHeight > ref.current.clientHeight);
+      }
+    });
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
   const gallery = [
     "https://preview.redd.it/e54t88z9l2p71.jpg?width=640&crop=smart&auto=webp&s=471982e45741e3afeb0e03c4c48166b092ce1494",
@@ -93,6 +113,7 @@ const Project = () => {
             <div className="lg:grid grid-cols-5 gap-5 py-5">
               <div className="col-span-3">
                 <p
+                  ref={ref}
                   className={`font-mono text-sm sm:text-base text-muted-foreground ${
                     !showMore && "line-clamp-6 sm:line-clamp-[15]"
                   }`}
@@ -103,7 +124,11 @@ const Project = () => {
                   onClick={() => setShowMore(!showMore)}
                   className="text-sky-500 font-semibold cursor-pointer"
                 >
-                  {showMore ? "Show less" : "Show more"}
+                  {isTruncated
+                    ? showMore
+                      ? "Show less"
+                      : "Show more"
+                    : showMore && "Show less"}
                 </span>
               </div>
               {/* Tag Groups */}
