@@ -137,6 +137,18 @@ const Header = () => {
           <SheetTitle>CS Expo 2024</SheetTitle>
           {/* TODO: use collapsible */}
           <div className="flex flex-col gap-5 py-5">{navLinks}</div>
+          <div className="flex w-full">
+            <a
+              className="w-full"
+              target="_blank"
+              rel="noreferrer noopener"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSegkYz8SEfFc3oPdN4YrYynQFbDWVgqEGnPzKV-d20qEsEB3Q/viewform"
+            >
+              <Button className="bg-red-700 text-gray-200 hover:text-black w-full">
+                Register
+              </Button>
+            </a>
+          </div>
         </SheetContent>
       </Sheet>
     </header>
