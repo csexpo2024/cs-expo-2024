@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook } from "lucide-react";
 import Logo from "@/assets/img/logo-silver-cropped.png";
 
 import { Link } from "react-router-dom";
