@@ -111,7 +111,7 @@ const Expo = () => {
         <div className="flex flex-col gap-32 p-14 lg:p-44 z-50">
           <EventInfo
             title="CS Expo Day 2"
-            subtitle="November 19, 2024 | 8:00 AM - 5:00 PM "
+            subtitle="November 20, 2024 | 8:00 AM - 5:00 PM "
             body="Creating breakthroughs for the computer vision category are the groups who will be 
             presenting for the second day of the CS Expo event. These groups are: Algoriteam, Code, 
             Computer Science Global Offensive, GIGGA, HUI, IntelliWatch, JLNN, Lambda, Puno ng 
