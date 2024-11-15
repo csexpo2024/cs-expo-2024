@@ -93,7 +93,7 @@ const SectionWrapper = ({
   <div className="relative">
     <div
       className={`absolute inset-0 -mx-[50vw] left-[50%] right-[50%] ${
-        index % 2 === 0 ? "bg-black" : "bg-red-900"
+        index % 2 === 0 ? "bg-black" : "bg-[#410404]"
       }`}
     />
     <div className="relative max-w-[1700px] w-full mx-auto flex flex-col md:flex-row px-4">
@@ -262,7 +262,7 @@ const HallOfFame = () => {
   );
 
   return (
-    <div className="bg-[#110101] min-h-screen w-full overflow-x-hidden">
+    <div className="box-pattern min-h-screen w-full overflow-x-hidden">
       <div className="w-full mx-auto px-4">
         <section className="flex flex-col justify-center items-center py-4 md:py-8">
           <h1 className="text-3xl md:text-6xl text-center text-red-600 font-heading-italic mb-8 md:mb-12 w-full">
