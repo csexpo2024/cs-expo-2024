@@ -73,7 +73,7 @@ const About = () => {
     { id: "csgo", name: "CSGO", logo: CSGOLogo },
     { id: "book-i", name: "Jathro's Matrix", logo: JathrosMatrixLogo },
     { id: "intelliwatch", name: "IntelliWatch", logo: IntelliWatchLogo },
-    { id: "lambbda", name: "Lambda", logo: LambdaLogo },
+    { id: "lambda", name: "Lambda", logo: LambdaLogo },
     { id: "fit-vision", name: "Code", logo: CodeLogo },
   ];
   const student = [
