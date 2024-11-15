@@ -1019,7 +1019,7 @@ const FacultyCard = ({ faculty }: { faculty: Faculty }) => {
       <div className="bg-white bg-opacity-5 backdrop-blur-md rounded-lg shadow-lg p-4 my-4">
         <div className="flex justify-center">
           <img
-            src={`/img/people/${sanitizeName(faculty.surname)}.jpg`}
+            src={`/img/faculty/${sanitizeName(faculty.surname)}.jpg`}
             alt={faculty.surname}
             className="w-40"
           />
