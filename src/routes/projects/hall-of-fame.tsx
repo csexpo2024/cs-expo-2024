@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { projects } from "../../constants/projects";
+
 import {
   Carousel,
   CarouselContent,
