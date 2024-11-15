@@ -62,7 +62,7 @@ export const majors: Partner[] = [
   },
   {
     name: 'FiT iTamaraws',
-    logo: '/img/partners/acm.png',
+    logo: '/img/partners/tec.png',
     fb: "https://www.facebook.com/iTamarawsEsportsClub",
     ig: "https://www.instagram.com/fit.tec.ig",
   },
