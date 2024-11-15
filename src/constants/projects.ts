@@ -9,7 +9,7 @@ interface Tags {
     concepts: string[];
 }
 
-interface Project {
+export interface Project {
     title: string;
     research_title: string;
     category: string;
