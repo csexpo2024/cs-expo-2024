@@ -37,14 +37,14 @@ const Partners = () => {
       {/* Major Partners */}
       <PartnerGroup
         title="Major Partners"
-        subtitle="Supporting our cause"
+        subtitle="Our Primary Partners"
         partners={majors}
         reverse
       />
       {/* Minor Partners */}
       <PartnerGroup
         title="Minor Partners"
-        subtitle="Expanding our reach"
+        subtitle="Our Supoprting Partners"
         partners={minors}
       />
       {/* Caution Tape Footer */}
