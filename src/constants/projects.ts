@@ -112,6 +112,12 @@ export const projects: Record<string, Project> = {
             mentor: ["Abraham T. Magpantay"],
             concepts: ["Fraud Detection", "MLFDS", "Machine Learning", "Cybersecurity", "privacy"],
         },
+        gallery: [
+            {
+                name: "mlfds",
+                url: "/img/posters/chilimansi-poster.jpg"
+            }
+        ]
     },
     "fit-vision": {
         title: "FIT VISION",
@@ -160,7 +166,7 @@ export const projects: Record<string, Project> = {
         group: "Code Geass",
         groupid: "codegeass",
         description: "This study presents the development and evaluation of CariDent AI Medix, a convolutional neural network (CNN) designed as a preliminary diagnostic tool for identifying dental caries. Utilizing the YOLOv8 architecture, the system enhances early-stage caries detection. The research is applied, descriptive, and prescriptive, focusing on practical solutions, detailing system characteristics, and providing treatment recommendations based on caries severity. The Scrum methodology was used for iterative development. A robust dataset of 1,420 dental images, labeled with 14,565 annotations across four classes, was used to train the CNN. The evaluation involved 44 computer science students, 3 dental professionals, 7 IT experts, and 2 CS professors. The Technology Acceptance Model (TAM) assessed user acceptance, while Subject Matter Expert (SME) feedback validated caries classification. IT experts and CS professors evaluated the system using ISO-25010 standards for functionality and performance. Findings demonstrate that CariDent AI Medix effectively identifies dental caries with high accuracy, achieving an Area Under the Curve (AUC) of 0.969 for healthy cases, 0.960 for initial caries, 0.953 for moderate caries, and 0.954 for extensive caries. The overall mean Average Precision for all classes combined (mAP@0.5) was 0.959. Evaluation by various respondents revealed high positive reception, with the application’s perceived usefulness rated at 4.61 and ease of use at 4.72 by students, on a 5- point Likert scale. Experts commended its functional stability (4.00), performance efficiency (4.15), and usability (4.74). The highest rating across all evaluations was for the user interface's intuitiveness and ease of navigation (4.89), while the lowest rating was for the strength of data encryption for transmitting and storing images (3.89). The overall consensus indicates strong functionality, user-friendliness, and clinical relevance, suggesting its potential for widespread adoption and positive impact in dental health management.",
-        avp: "https://www.youtube.com/embed/jQNEiHzIcX4?si=z_OGbedZhXvKgCNR",
+        avp: "https://www.youtube.com/embed/3kDsMpyoFE4?si=U4NAuCQCiHoRWA1B",
         tags: {
             members: ["Ordonez, Kendric", "Babasa, Victoria Faye", "Camasura, Jasmine", "Manarang, Geryko"],
             mentor: ["Hadji J. Tejuco, DIT"],
