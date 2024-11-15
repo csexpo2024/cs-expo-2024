@@ -30,12 +30,14 @@ const Partners = () => {
       </section>
       {/* Media Partners */}
       <PartnerGroup
+        id="media"
         title="Media Partners"
         subtitle="Expanding our reach"
         partners={medias}
       />
       {/* Major Partners */}
       <PartnerGroup
+        id="major"
         title="Major Partners"
         subtitle="Our Primary Partners"
         partners={majors}
@@ -43,6 +45,7 @@ const Partners = () => {
       />
       {/* Minor Partners */}
       <PartnerGroup
+        id="minor"
         title="Minor Partners"
         subtitle="Our Supoprting Partners"
         partners={minors}
@@ -60,11 +63,13 @@ const Partners = () => {
 };
 
 const PartnerGroup = ({
+  id,
   title,
   subtitle,
   partners,
   reverse,
 }: {
+  id: string;
   title: string;
   subtitle: string;
   partners: Partner[];
@@ -76,7 +81,9 @@ const PartnerGroup = ({
         reverse ? "items-end" : "items-start"
       } px-24 py-16`}
     >
-      <h2 className="font-heading text-2xl">{title}</h2>
+      <h2 id={id} className="font-heading text-2xl">
+        {title}
+      </h2>
       <span className="text-yellow-500 uppercase">{subtitle}</span>
       <div className="flex flex-wrap justify-center gap-5">
         {partners.map((company, i) => (

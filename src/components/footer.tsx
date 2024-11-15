@@ -58,12 +58,6 @@ const Footer = () => {
               <p className="font-bold">Our Partners</p>
               <ul>
                 <li>
-                  <Link to="/partners#gold">Gold Sponsors</Link>
-                </li>
-                <li>
-                  <Link to="/partners#silver">Bronze Sponsors</Link>
-                </li>
-                <li>
                   <Link to="/partners#media">Media Partners</Link>
                 </li>
                 <li>
