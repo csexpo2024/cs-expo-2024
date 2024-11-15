@@ -380,13 +380,13 @@ const About = () => {
     {
       committee: "Logistics Committee",
       name: "Isaiah Ezekiel Guevarra",
-      surname: "Guevarra",
+      surname: "Gueverra",
       position: "Logistics Co-Head",
     },
     {
       committee: "Logistics Committee",
       name: "Laurenz Aeron Lhynt Anicieto",
-      surname: "Anicieto",
+      surname: "Ancieto",
     },
     {
       committee: "Logistics Committee",
@@ -438,7 +438,6 @@ const About = () => {
       name: "Paul Gernale",
       surname: "Gernale",
     },
-    { committee: "Logistics Committee", name: "William Ines", surname: "Ines" },
     {
       committee: "Logistics Committee",
       name: "Ramandeep Kingra",
