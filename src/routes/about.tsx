@@ -488,7 +488,7 @@ const About = () => {
     {
       committee: "Developers Committee",
       name: "Kendric M. Ordoñez",
-      surname: "Ordoñez",
+      surname: "Ordonez",
       position: "Developers Head",
     },
     {
