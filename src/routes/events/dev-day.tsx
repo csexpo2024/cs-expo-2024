@@ -1,9 +1,9 @@
 import DevDayBg from "@/assets/img/bg/expo-hero.png";
 
-import LogoSilver from "@/assets/img/logo-silver-cropped.png";
-
 import { PolaroidArticle } from "@/components/polaroid-article";
 import { EventInfo } from "@/components/event-info";
+
+import { speakers } from "@/constants/speakers";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -113,12 +113,13 @@ const DevDay = () => {
         <Carousel className="w-full max-w-full">
           <CarouselContent>
             {/* TODO: replace with actual content */}
-            {Array.from({ length: 5 }).map((_, i) => (
+            {speakers.map((speaker, i) => (
+              !speaker.is_cs_expo &&
               <CarouselItem key={i}>
                 <PolaroidArticle
-                  title="Dr. Shane Ambat"
-                  body="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
-                  imghref={LogoSilver}
+                  title={speaker.full_name}
+                  body={speaker.bionote}
+                  imghref={speaker.img_url}
                 />
               </CarouselItem>
             ))}

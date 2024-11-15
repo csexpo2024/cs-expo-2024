@@ -1,8 +1,10 @@
 import ExpoBg from "@/assets/img/bg/dev-day-hero.png";
-import LogoSilver from "@/assets/img/logo-silver-cropped.png";
 
 import { PolaroidArticle } from "@/components/polaroid-article";
 import { EventInfo } from "@/components/event-info";
+
+import { speakers } from "@/constants/speakers";
+import { panelists } from "@/constants/panelists";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -133,13 +135,12 @@ const Expo = () => {
         <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
         <Carousel className="w-full max-w-full">
           <CarouselContent>
-            {/* TODO: replace with actual content */}
-            {Array.from({ length: 5 }).map((_, i) => (
+            {panelists.map((panelist, i) => (
               <CarouselItem key={i}>
                 <PolaroidArticle
-                  title="Dr. Shane Ambat"
-                  body="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
-                  imghref={LogoSilver}
+                  title={panelist.full_name}
+                  body={panelist.bionote}
+                  imghref={panelist.img_url}
                 />
               </CarouselItem>
             ))}
@@ -148,15 +149,15 @@ const Expo = () => {
           <CarouselNext />
         </Carousel>
         <h1 className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
-        <Carousel className="w-full max-w-full">
+        <Carousel className="w-full max-w-full text-right">
           <CarouselContent>
-            {/* TODO: replace with actual content */}
-            {Array.from({ length: 5 }).map((_, i) => (
+            {speakers.map((speaker, i) => (
+              speaker.is_cs_expo &&
               <CarouselItem key={i}>
                 <PolaroidArticle
-                  title="Dr. Shane Ambat"
-                  body="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
-                  imghref={LogoSilver}
+                  title={speaker.full_name}
+                  body={speaker.bionote}
+                  imghref={speaker.img_url}
                   reversed
                 />
               </CarouselItem>

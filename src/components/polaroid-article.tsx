@@ -24,11 +24,11 @@ export const PolaroidArticle = ({
           <img src={imghref} className="w-96" />
         </PolaroidFrame>
       </div>
-      <div className="w-full px-10 py-5 lg:px-0">
+      <div className="w-full py-5 lg:px-0">
         <p className="font-heading-italic text-2xl text-yellow-500 mb-2">
           {title}
         </p>
-        <p>{body}</p>
+        <p className="font-semibold">{body}</p>
       </div>
     </div>
   );
