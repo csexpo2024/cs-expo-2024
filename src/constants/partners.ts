@@ -113,3 +113,5 @@ export const minors: Partner[] = [
     ig: "https://www.instagram.com/puptcs",
   },
 ]
+
+export const allPartners = [...medias, ...minors, ...majors];

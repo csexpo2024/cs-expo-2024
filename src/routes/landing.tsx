@@ -15,6 +15,8 @@ import { useRef } from "react";
 
 import { Link } from "react-router-dom";
 
+import { allPartners } from "@/constants/partners";
+
 const Landing = () => {
   const heroRef = useRef(null);
   const eventsRef = useRef(null);
@@ -88,9 +90,9 @@ const Landing = () => {
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               >
                 {/* placeholder only - TODO: replace with real sponsors */}
-                {Array.from({ length: 15 }).map((_, j) => (
+                {allPartners.map((partner, j) => (
                   <PolaroidFrame key={j}>
-                    <img src={LogoSilver} className="min-w-24" />
+                    <img src={partner.logo} className="min-w-24" />
                   </PolaroidFrame>
                 ))}
               </motion.div>
