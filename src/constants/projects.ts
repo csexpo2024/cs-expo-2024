@@ -33,7 +33,7 @@ export const projects: Record<string, Project> = {
         avp: "https://www.youtube.com/embed/FRMhfs-dU6o?si=71oEAvzlzJv9MKWt",
         tags: {
             members: ["Pacheco, Samuel Jacob", "Perez, Cyra Shane", "Signo, John Benedict", "Wong, Ella Belle"],
-            mentor: ["DIT. Angelo C. Arguson"],
+            mentor: ["Angelo C. Arguson, DIT"],
             concepts: ["Crime Forecasting", "ARIMA Model", "Knowledge-Based Recommendations"]
         },
         gallery: [
@@ -163,7 +163,7 @@ export const projects: Record<string, Project> = {
         avp: "https://www.youtube.com/embed/jQNEiHzIcX4?si=z_OGbedZhXvKgCNR",
         tags: {
             members: ["Ordonez, Kendric", "Babasa, Victoria Faye", "Camasura, Jasmine", "Manarang, Geryko"],
-            mentor: ["Dr. Hadji Tejuco"],
+            mentor: ["Hadji J. Tejuco, DIT"],
             concepts: ["Dental Caries","A.I.", "Computer Vision", "Object Detection"]
         },
         gallery: [
@@ -395,7 +395,7 @@ export const projects: Record<string, Project> = {
         avp: "https://www.youtube.com/embed/weDL-CqNkD4?si=kJJBFjCI_e94aKI2",
         tags: {
             members: ["Bajaro, Clarissa M.", "Rosendo, Janna Rane C.", "Vicio, Shahani Fe D."],
-            mentor: ["Justine Jude Pura"],
+            mentor: ["Justine Jude C. Pura"],
             concepts: ["Image Processing", "Facial Segmentation", "Computer Vision", "Object Detection"],
         },
         gallery: [
@@ -431,7 +431,7 @@ export const projects: Record<string, Project> = {
         avp: "https://www.youtube.com/embed/-a7lfpjl5GU?si=ZdyqLje2YS68iQHk",
         tags: {
             members: ["Bulot, Justin Matthew C.", "Raymundo, Glen Daniell F.", "Rosal, Zuphia M.", "Serrano, Albert Kobe C."],
-            mentor: ["Dr. Hadji Tejuco"],
+            mentor: ["Hadji J. Tejuco, DIT"],
             concepts: ["Machine Learning", "Machine Learning Approaches", "Classification and Regression Trees"],
         },
         gallery: [
@@ -511,7 +511,7 @@ export const projects: Record<string, Project> = {
         avp: "https://www.youtube.com/embed/fe960zeNHFU?si=MLMn_ySBybjDP9Fz",
         tags: {
             members: ["Roxas, Jethro Emmanuel C.", "Jestingor, Near Tracy D.", "Jimeno, Eymard Julian S.", "Nadonga, Henrick Brian M."],
-            mentor: ["Hadji J. Tejuco"],
+            mentor: ["Hadji J. Tejuco, DIT"],
             concepts: ["A.I", "Algorithm", "Natural Language Processing", "Machine Learning"],
         },
         gallery: [
@@ -787,7 +787,7 @@ export const projects: Record<string, Project> = {
         avp: "https://www.youtube.com/embed/qA-C2dqT2ng?si=FdMy_O-9z-OpduV0",
         tags: {
             members: ["Umali, Kayla Denise L.", "Facto, Jhon Carlo P.", "Tan, Eleazar"],
-            mentor: ["Dr. Beau Gray M. Habal"],
+            mentor: ["Beau Gray M. Habal, DIT"],
             concepts: ["Algorithms", "Link Net", "Image Processing", "Fetal Ultrasound Image"],
         },
         gallery: [
