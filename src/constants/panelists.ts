@@ -54,5 +54,40 @@ export const panelists: Panelist[] = [
     full_name: "Dr. Jennifer Contreras",
     bionote: `Dr. Jennifer Contreras is a founder of JOCTech ICT Consultancy and Training Services and a faculty member in the Department of Software Technology at De La Salle University - Manila. With over two decades of experience in academia, she had the privilege of teaching and connecting with students from diverse backgrounds across the globe (Libya, Sudan, Malaysia, Sweden, and the Philippines). This journey has exposed her to a rich array of beliefs, cultures, and educational backgrounds among her students. Furthermore, Doc Jen as they call her, at the Department of Information and Communications Technology is leading MOOCS and Learning Management System for reskilling and upskilling projects.`,
     img_url: "/img/panelists/contreras.png"
+  },
+  {
+    full_name: "Dr. Menchita F. Dumlao",
+    bionote: `Dr. Dumlao is the Program Chair of Master of Science in Information Technology and Bachelor of Science in Information Technology and Head of Technology Integration Team. Graduate research mentoring and academic advising are the core activities and focus of her present position. Exploration of new knowledge, innovation in IT and computer science, investigation of recent literatures and research publication are some of achievements that she has contributed to PWU. She is a 21st century leader equipped with experience, knowledge and skills for emerging issues in the fourth industrial revolution, and a visionary that formulates new skill sets, strategies and new business models to gain competitive advantage.`,
+    img_url: "/img/panelists/dumlao.png"
+  },
+  {
+    full_name: "Dr. Demeke G. Bayyou",
+    bionote: `He received his B.Tech. in Computer Science and Engineering from Defence University, College of Engineering Ethiopia, M.Tech. in Computer Science and Engineering from Defence Institute of Advanced Technology, India as research scholar and Doctor of Information Technology from AMA University, Philippines. His research interest includes Cloud Computing, Big Data, Internet of Things, Artificial Intelligence and Cybersecurity.`,
+    img_url: "/img/panelists/bayyou.png"
+  },
+  {
+    full_name: "Mr. Justine Jude Pura",
+    bionote: `Mr. Justine Pura is a dedicated educated and leader with a passion for leveraging technology to drive meaningful change. With over five years of experience in academic and govvernment sectors, he has had the privilege of leading nationwide digital literacy programs, developing future tech leaders, and fostering cross-cultural collaboration. Mr. Pura finished his Bachelor of Science in Computer Science on 2017, and further expanded his academic journey after finishing Master of Business Administration at National Sun Yat-Sen University.`,
+    img_url: "/img/panelists/pura.jpg"
+  },
+  {
+    full_name: "Dr. Shirley Moraga",
+    bionote: `Dr. Moraga is an exceptional professor currently teaching at University of the East. She finished her doctorate in Information Technology on UE at 2018, and Masters in Information Technology on Adamson University at 2004. Her research works pave way for the growth in the learning management and marketing sector.`,
+    img_url: "/img/panelists/moraga.png"
+  },
+  {
+    full_name: "Dr. Dennis Gonzales",
+    bionote: `Dr. Gonzales is an esteemed academician at University of the East. He is a PACUCOA accreditor, researcher, consultant, and peer reviewer. His research experience helped expand the software development, information technology, data science and machine learning sectors.`,
+    img_url: "/img/panelists/gonzales.png"
+  },
+  {
+    full_name: "Ms. Kim Giselle A. Bautista",
+    bionote: `Ms. Bautista in an instructor currently teaching in Far Eastern University. She was a previous instructor and lecturer at University of Eastern Philippines (UEP) and ABE International Business College. She finished her Master of Science in Information Technology on Polytechnic University of the Philippines (PUP) this 2023.`,
+    img_url: "/img/panelists/bautista.png"
+  },
+  {
+    full_name: "Mr. Alec Bryan S. Sison",
+    bionote: `Mr. Sison is a faculty instructor at FEU Institute of Technology. He finished his Computer Science degree at FEU Tech on 2024, and is currently taking his masters degree in the esteemed University of the Philippines (UP).`,
+    img_url: "/img/panelists/sison.jpg"
   }
 ];
