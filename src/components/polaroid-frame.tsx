@@ -26,7 +26,11 @@ const PolaroidFrame = ({
         title ? "" : `${_size[1]}`
       } bg-white rounded-sm text-center`}
     >
-      <div className={`${nonPadded ? "" : "p-4"} bg-neutral-950 rounded-md`}>
+      <div
+        className={`${
+          nonPadded ? "" : "p-4"
+        } bg-neutral-950 bg-opacity-90 rounded-md flex justify-center items-center h-full`}
+      >
         {children}
       </div>
       {title && (
