@@ -18,6 +18,8 @@ import { PolaroidFrame } from "@/components/polaroid-frame";
 
 import { Photo } from "@/constants/projects";
 
+import NewspaperBg from "@/assets/img/bg/newspaper.jpg";
+
 const Project = () => {
   const { projectid } = useParams<{ projectid: string }>();
 
@@ -78,7 +80,10 @@ const Project = () => {
         <div
           className="group-backdrop sm:mx-28 absolute z-[0] max-w-full h-[500px] right-0 top-0 left-0 bg-center bg-no-repeat bg-cover animate-fade-in duration-700"
           style={{
-            backgroundImage: `url(/img/team/${project?.groupid}.jpg)`,
+            backgroundImage:
+              project?.title === "MLFDS"
+                ? `url(${NewspaperBg})`
+                : `url(/img/team/${project?.groupid}.jpg)`,
           }}
         ></div>
         <img
