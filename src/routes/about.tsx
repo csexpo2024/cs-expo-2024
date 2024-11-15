@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useSwipeable } from "react-swipeable";
+import { Link } from "react-router-dom";
 
 import MainPoster from "@/assets/img/main-poster.png";
 import CautionTape from "@/assets/img/caution-tape-blank-hr.png";
@@ -52,28 +53,28 @@ interface Faculty {
 
 const About = () => {
   const team = [
-    { name: "Agatha", logo: AgathaLogo },
-    { name: "LMNTRX", logo: LMNTRXLogo },
-    { name: "Strawhats", logo: StrawhatsLogo },
-    { name: "Hurtz", logo: HurtzLogo },
-    { name: "Code Geass", logo: CodeGeassLogo },
-    { name: "Algoriteam", logo: AlgoriteamLogo },
-    { name: "Lorem Ipsum", logo: LoremIpsumLogo },
-    { name: "PnP", logo: PnPLogo },
-    { name: "HUI", logo: HUILogo },
-    { name: "LMDIFY", logo: LMDIFYLogo },
-    { name: "Codex", logo: CodexLogo },
-    { name: "Samsan", logo: SamsanLogo },
-    { name: "Theta", logo: ThetaLogo },
-    { name: "JLNN", logo: JLNNLogo },
-    { name: "Gigga", logo: GiggaLogo },
-    { name: "Ctrl Alt Delete", logo: CtrlAltDeleteLogo },
-    { name: "EnSys", logo: EnSysLogo },
-    { name: "CSGO", logo: CSGOLogo },
-    { name: "Jathro's Matrix", logo: JathrosMatrixLogo },
-    { name: "IntelliWatch", logo: IntelliWatchLogo },
-    { name: "Lambda", logo: LambdaLogo },
-    { name: "Code", logo: CodeLogo },
+    { id: "agila", name: "Agatha", logo: AgathaLogo },
+    { id: "visual-sql", name: "LMNTRX", logo: LMNTRXLogo },
+    { id: "smish-x", name: "Strawhats", logo: StrawhatsLogo },
+    { id: "onics", name: "Hurtz", logo: HurtzLogo },
+    { id: "carident", name: "Code Geass", logo: CodeGeassLogo },
+    { id: "meowtion", name: "Algoriteam", logo: AlgoriteamLogo },
+    { id: "etbx", name: "Lorem Ipsum", logo: LoremIpsumLogo },
+    { id: "pnp", name: "PnP", logo: PnPLogo },
+    { id: "elixir", name: "HUI", logo: HUILogo },
+    { id: "smart-tasks", name: "LMDIFY", logo: LMDIFYLogo },
+    { id: "tala", name: "Codex", logo: CodexLogo },
+    { id: "ultrascan", name: "Samsan", logo: SamsanLogo },
+    { id: "theta", name: "Theta", logo: ThetaLogo },
+    { id: "marikit", name: "JLNN", logo: JLNNLogo },
+    { id: "smarteyes", name: "Gigga", logo: GiggaLogo },
+    { id: "mimical", name: "Ctrl Alt Delete", logo: CtrlAltDeleteLogo },
+    { id: "ensys-chat", name: "EnSys", logo: EnSysLogo },
+    { id: "csgo", name: "CSGO", logo: CSGOLogo },
+    { id: "book-i", name: "Jathro's Matrix", logo: JathrosMatrixLogo },
+    { id: "intelliwatch", name: "IntelliWatch", logo: IntelliWatchLogo },
+    { id: "lambbda", name: "Lambda", logo: LambdaLogo },
+    { id: "fit-vision", name: "Code", logo: CodeLogo },
   ];
   const student = [
     {
@@ -733,10 +734,12 @@ const About = () => {
           22 Bold Ideas, One Shared Vision
         </span>
         <div className="mt-20 px-10 columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-4 max-w-7xl mx-auto">
-          {team.map((display, i) => (
-            <div key={i} className="avoid-break">
-              <TeamCard team={display} />
-            </div>
+          {team.map((group, i) => (
+            <Link to={`/projects/${group.id}`}>
+              <div key={i} className="avoid-break">
+                <TeamCard team={group} />
+              </div>
+            </Link>
           ))}
         </div>
       </section>
