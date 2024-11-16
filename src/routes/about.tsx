@@ -1021,7 +1021,7 @@ const FacultyCard = ({ faculty }: { faculty: Faculty }) => {
           <img
             src={`/img/faculty/${sanitizeName(faculty.surname)}.jpg`}
             alt={faculty.surname}
-            className="w-40 rounded-full"
+            className="w-40 rounded-full aspect-square object-cover"
           />
         </div>
         <div className="pt-3 text-center">
