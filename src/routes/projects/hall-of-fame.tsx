@@ -72,13 +72,13 @@ const ProjectCard = ({
           {entry.research_title}
         </div>
       </div>
-      {/* <div className="flex justify-end mt-4 font-content">
+      <div className="flex justify-end mt-4 font-content">
         <Link to={`/projects/${entry.id}`}>
           <Button variant="ghost" size="sm">
             Learn More
           </Button>
         </Link>
-      </div> */}
+      </div>
     </div>
   </div>
 );
@@ -117,37 +117,36 @@ const SectionTitle = ({
 );
 
 // Data constants
-
 const placeholderProjects = {
   team1: {
     id: "team1",
     groupid: "team1",
-    research_title: "",
-    group: "Coming Soon",
+    research_title: "AI-Powered Medical Diagnosis System",
+    group: "Team MediTech",
   },
   team2: {
     id: "team2",
     groupid: "team2",
-    research_title: "",
-    group: "Coming Soon",
+    research_title: "Smart Urban Transportation Optimization",
+    group: "Urban Mobility Solutions",
   },
   team3: {
     id: "team3",
     groupid: "team3",
-    research_title: "",
-    group: "Coming Soon",
+    research_title: "Sustainable Energy Management Platform",
+    group: "EcoTech Innovators",
   },
   team4: {
     id: "team4",
     groupid: "team4",
-    research_title: "",
-    group: "Coming Soon",
+    research_title: "Blockchain-based Supply Chain Tracking",
+    group: "Chain Analytics",
   },
   team5: {
     id: "team5",
     groupid: "team5",
-    research_title: "",
-    group: "Coming Soon",
+    research_title: "Advanced Natural Language Processing Framework",
+    group: "LangTech Solutions",
   },
 };
 
@@ -161,7 +160,6 @@ const createProjectEntry = (id: string, rank?: number): Entry => ({
 });
 
 // Main component
-
 const HallOfFame = () => {
   const categories: Category[] = [
     {
@@ -176,7 +174,7 @@ const HallOfFame = () => {
       entries: ["team2", "team3", "team4"].map((id, index) =>
         createProjectEntry(id, index + 1)
       ),
-      titleColor: "text-white",
+      titleColor: "text-yellow-400",
     },
     {
       title: "BEST PRESENTER",
@@ -190,7 +188,7 @@ const HallOfFame = () => {
       entries: ["team2", "team3", "team5"].map((id, index) =>
         createProjectEntry(id, index + 1)
       ),
-      titleColor: "text-white",
+      titleColor: "text-yellow-400",
     },
     {
       title: "BEST POSTER",
@@ -214,9 +212,9 @@ const HallOfFame = () => {
   const bestMentor = {
     title: "BEST THESIS MENTOR",
     winner: {
-      name: "Coming Soon",
+      name: "Dr. Maria Santos",
       image: LogoSilver,
-      details: "",
+      details: "Artificial Intelligence Department",
     },
     titleColor: "text-yellow-400",
   };
@@ -241,7 +239,7 @@ const HallOfFame = () => {
 
   const renderBestByCategory = () => (
     <SectionWrapper index={categories.length}>
-      <SectionTitle title={bestByCategory.title} titleColor="text-white" />
+      <SectionTitle title={bestByCategory.title} titleColor="text-yellow-400" />
       <div className="flex-1 p-8">
         <Carousel className="w-full">
           <CarouselContent>
