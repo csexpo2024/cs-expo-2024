@@ -73,11 +73,13 @@ const ProjectCard = ({
         </div>
       </div>
       <div className="flex justify-end mt-4 font-content">
+        {/*
         <Link to={`/projects/${entry.id}`}>
           <Button variant="ghost" size="sm">
             Learn More
           </Button>
         </Link>
+        */}
       </div>
     </div>
   </div>
@@ -121,32 +123,32 @@ const placeholderProjects = {
   team1: {
     id: "team1",
     groupid: "team1",
-    research_title: "AI-Powered Medical Diagnosis System",
-    group: "Team MediTech",
+    research_title: "",
+    group: "Coming Soon",
   },
   team2: {
     id: "team2",
     groupid: "team2",
-    research_title: "Smart Urban Transportation Optimization",
-    group: "Urban Mobility Solutions",
+    research_title: "",
+    group: "Coming Soon",
   },
   team3: {
     id: "team3",
     groupid: "team3",
-    research_title: "Sustainable Energy Management Platform",
-    group: "EcoTech Innovators",
+    research_title: "",
+    group: "Coming Soon",
   },
   team4: {
     id: "team4",
     groupid: "team4",
-    research_title: "Blockchain-based Supply Chain Tracking",
-    group: "Chain Analytics",
+    research_title: "",
+    group: "Coming Soon",
   },
   team5: {
     id: "team5",
     groupid: "team5",
-    research_title: "Advanced Natural Language Processing Framework",
-    group: "LangTech Solutions",
+    research_title: "",
+    group: "Coming Soon",
   },
 };
 
@@ -174,7 +176,7 @@ const HallOfFame = () => {
       entries: ["team2", "team3", "team4"].map((id, index) =>
         createProjectEntry(id, index + 1)
       ),
-      titleColor: "text-yellow-400",
+      titleColor: "text-white",
     },
     {
       title: "BEST PRESENTER",
@@ -188,7 +190,7 @@ const HallOfFame = () => {
       entries: ["team2", "team3", "team5"].map((id, index) =>
         createProjectEntry(id, index + 1)
       ),
-      titleColor: "text-yellow-400",
+      titleColor: "text-white",
     },
     {
       title: "BEST POSTER",
@@ -212,9 +214,9 @@ const HallOfFame = () => {
   const bestMentor = {
     title: "BEST THESIS MENTOR",
     winner: {
-      name: "Dr. Maria Santos",
+      name: "Coming Soon",
       image: LogoSilver,
-      details: "Artificial Intelligence Department",
+      details: "",
     },
     titleColor: "text-yellow-400",
   };
@@ -239,7 +241,7 @@ const HallOfFame = () => {
 
   const renderBestByCategory = () => (
     <SectionWrapper index={categories.length}>
-      <SectionTitle title={bestByCategory.title} titleColor="text-yellow-400" />
+      <SectionTitle title={bestByCategory.title} titleColor="text-white" />
       <div className="flex-1 p-8">
         <Carousel className="w-full">
           <CarouselContent>
