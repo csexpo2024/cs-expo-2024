@@ -82,20 +82,18 @@ const Expo = () => {
           <EventInfo
             title="CS Expo Day 1"
             subtitle="November 19, 2024 | 8:00 AM - 5:00 PM "
-            body="Join the first day of CS EXPO, as bright fourth year students present their innovative theses with topics regarding data analytics, 
+            body="Join the first day of CS EXPO, as bright fourth-year students present their innovative theses with topics regarding data analytics, 
             health, and natural language processing. Under the data analytics category are groups Agatha, LMNTRX, 
             and Strawhats. For the health category, Code Geass, Hurtz, Lorem Ipsum, and Samsan. Lastly, for the
-            natural language processing category are the thesis groups Codex, Ctrl Alt Delete, EnSys, Jathro's Matrix, 
-            and LMDIFY."
+            natural language processing category are the thesis groups Codex, Ctrl Alt Delete, EnSys, Jathro's Matrix, and LMDIFY."
           />
           <EventInfo
             title="Keynote Talks"
             subtitle="The power of innovation: how technology crafts our daily realities"
-            body="Innovation in technology has become the driving force behind the transformation of our everyday lives.
-            This panel will explore how emerging technologies are shaping modern society, 
-            from the way we work and communciate to how we interact with the world around us. 
+            body="Innovation in technology has become the driving force behind the transformation of our everyday lives. This panel will explore how emerging technologies are shaping modern society, 
+            from the way we work and communicate to how we interact with the world around us. 
             Our experts will discuss the breakthroughs that are redefining industries, 
-            enhancing human experiences,and solving global challenges."
+            enhancing human experiences, and solving global challenges."
           />
         </div>
       </motion.section>
@@ -114,8 +112,8 @@ const Expo = () => {
           <EventInfo
             title="CS Expo Day 2"
             subtitle="November 20, 2024 | 8:00 AM - 5:00 PM "
-            body="Creating breakthroughs for the computer vision category are the groups who will be 
-            presenting for the second day of the CS Expo event. These groups are: Algoriteam, Code, 
+            body="Creating breakthroughs for the computer vision category are the groups that will be 
+            presenting on the second day of the CS Expo event. These groups are Algoriteam, Code, 
             Computer Science Global Offensive, GIGGA, HUI, IntelliWatch, JLNN, Lambda, Puno ng 
             Pagmamahal, and Theta."
           />

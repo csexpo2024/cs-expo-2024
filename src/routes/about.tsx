@@ -657,10 +657,10 @@ const About = () => {
             <strong>
               <em>CS Expo 2024</em>
             </strong>{" "}
-            is the annual capstone event by the fourth-year students of FEU
+            is the annual capstone event for the fourth-year students of FEU
             Institute of Technology. This three-day assembly is a platform for
             trailblazing thesis projects and their implications in the
-            ever-evolving technospace. With the tagline{" "}
+            ever-evolving technology. With the tagline{" "}
             <strong>
               <em>"Unveiling New Possibilities and Creating New Realities,"</em>
             </strong>{" "}
@@ -681,8 +681,8 @@ const About = () => {
             <br />
             <br />
             After the presentation, deserving thesis groups and students will
-            receive an award for their innovation and research prowess at the
-            last day of the event, the{" "}
+            receive an award for their innovation and research prowess on the
+            last day of the event,{" "}
             <strong>
               <em>DevDay</em>
             </strong>
@@ -691,7 +691,7 @@ const About = () => {
             <strong>
               <em>November 22, 2024</em>
             </strong>
-            , will feature talks from prominent industry professionals about the
+            , and will feature talks from prominent industry professionals about
             software re-engineering and software packaging, addressing modern
             development challenges and optimizing legacy systems through
             re-engineering for better performance and maintainability, while
