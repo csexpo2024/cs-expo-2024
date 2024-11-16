@@ -375,7 +375,7 @@ const About = () => {
     {
       committee: "Logistics Committee",
       name: "Sean Archer Cruz",
-      surname: "Cruz",
+      surname: "cruz-sean",
       position: "Logistics Co-Head",
     },
     {
@@ -392,7 +392,7 @@ const About = () => {
     {
       committee: "Logistics Committee",
       name: "Carlo Jan Harry S. Añonuevo",
-      surname: "Añonuevo",
+      surname: "Anonuevo",
     },
     {
       committee: "Logistics Committee",
@@ -407,12 +407,12 @@ const About = () => {
     {
       committee: "Logistics Committee",
       name: "John Alvin Cruz",
-      surname: "Cruz",
+      surname: "cruz-john",
     },
     {
       committee: "Logistics Committee",
       name: "Rheiel John Del Rosario",
-      surname: "Del Rosario",
+      surname: "rosario",
     },
     {
       committee: "Logistics Committee",
@@ -995,7 +995,7 @@ const StudentCard = ({ student }: { student: Student }) => {
           <img
             src={`/img/people/${sanitizeName(student.surname)}.jpg`}
             alt={student.surname}
-            className="w-40"
+            className="w-40 rounded-full"
           />
         </div>
         <div className="pt-3 text-center">
@@ -1021,7 +1021,7 @@ const FacultyCard = ({ faculty }: { faculty: Faculty }) => {
           <img
             src={`/img/faculty/${sanitizeName(faculty.surname)}.jpg`}
             alt={faculty.surname}
-            className="w-40"
+            className="w-40 rounded-full"
           />
         </div>
         <div className="pt-3 text-center">
