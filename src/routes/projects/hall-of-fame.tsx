@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 import {
   Carousel,
@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "@/components/ui/button";
+//import { Button } from "@/components/ui/button";
 
 import LogoSilver from "@/assets/img/logo-silver.png";
 
