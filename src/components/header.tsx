@@ -123,9 +123,16 @@ const Header = () => {
       </NavLink>
       <nav className="ml-auto hidden lg:flex gap-3">
         {navLinks}
-        <Button className="bg-red-700 text-gray-200 hover:text-black mx-5">
-          Register
-        </Button>
+        <a
+          className="w-full"
+          target="_blank"
+          rel="noreferrer noopener"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSegkYz8SEfFc3oPdN4YrYynQFbDWVgqEGnPzKV-d20qEsEB3Q/viewform"
+        >
+          <Button className="bg-red-700 text-gray-200 hover:text-black mx-5">
+            Register
+          </Button>
+        </a>
       </nav>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger className="flex lg:hidden ml-auto" asChild>
