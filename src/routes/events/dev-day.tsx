@@ -79,9 +79,9 @@ const DevDay = () => {
             title="Dev Day"
             subtitle="November 22, 2024 | 8:00 AM - 1:00 PM"
             body="Deserving thesis groups and students will receive an award for their innovation and research
-            prowess at the this day of the event. A symposium highlighting the current state of computer science.
-            Dev day will feature talks from prominent industry professionals about the software re-engineering and
-            software packaging, addressing modern development challenges and optimizing legacy systems through
+            prowess on the day of the event. A symposium highlighting the current state of computer science.
+            Dev Day will feature talks from prominent industry professionals about the software re-engineering and
+            software packaging, addressing modern development challenges, and optimizing legacy systems through
             re-engineering for better performance and maintainability, while also exploring efficient software packaging
             practices for seamless deployment across diverse environments. DevDay 2024 aims to bridge academic
             excellence with real-world industry insights."
@@ -103,7 +103,7 @@ const DevDay = () => {
             emphasizes how teamwork and leadership drive success in refining and repurposing
             software systems, ensuring seamless integration, scalability, and efficiency. By
             fostering a collaborative environment, teams can better address the complexities of
-            re-engineering tasks, steamline packaging processes, and innovate solutions that
+            re-engineering tasks, streamline packaging processes, and innovate solutions that
             meet evolving technological needs."
           />
         </div>
