@@ -68,7 +68,7 @@ export const majors: Partner[] = [
   },
   {
     name: 'FEU Tech JPCS',
-    logo: '/img/partners/acm.png',
+    logo: '/img/partners/jpcs.png',
     fb: "https://www.facebook.com/feutechJPCS",
     ig: "https://www.instagram.com/jpcs_fit",
   },

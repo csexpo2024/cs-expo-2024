@@ -798,48 +798,52 @@ const About = () => {
                 <h3 className="text-4xl font-bold text-white uppercase mb-6">
                   {committeeNames[currentCommitteeIndex]}
                 </h3>
-                <div className="grid grid-cols-2 sd:grid-cols-2 md:grid-cols-4 gap-4 justify-items-center">
-                  {committees[committeeNames[currentCommitteeIndex]].coHead
-                    .length > 0 && (
+                <div className="flex flex-wrap justify-center gap-4">
+                  {committees[committeeNames[currentCommitteeIndex]].coHead.length > 0 && (
                     <>
-                      {committees[
-                        committeeNames[currentCommitteeIndex]
-                      ].coHead.map((student: Student, index: number) => (
-                        <StudentCard key={index} student={student} />
-                      ))}
-                      <div className="col-span-full"></div>
+                      {committees[committeeNames[currentCommitteeIndex]].coHead.map(
+                        (student: Student, index: number) => (
+                          <div key={index} className="w-[250px]">
+                            <StudentCard student={student} />
+                          </div>
+                        )
+                      )}
+                      <div className="w-full"></div>
                     </>
                   )}
-                  {committees[committeeNames[currentCommitteeIndex]].head
-                    .length > 0 && (
+                  {committees[committeeNames[currentCommitteeIndex]].head.length > 0 && (
                     <>
-                      {committees[
-                        committeeNames[currentCommitteeIndex]
-                      ].head.map((student: Student, index: number) => (
-                        <StudentCard key={index} student={student} />
-                      ))}
-                      <div className="col-span-full"></div>
+                      {committees[committeeNames[currentCommitteeIndex]].head.map(
+                        (student: Student, index: number) => (
+                          <div key={index} className="w-[250px]">
+                            <StudentCard student={student} />
+                          </div>
+                        )
+                      )}
+                      <div className="w-full"></div>
                     </>
                   )}
-                  {committees[committeeNames[currentCommitteeIndex]].others
-                    .length > 0 && (
+                  {committees[committeeNames[currentCommitteeIndex]].others.length > 0 && (
                     <>
-                      {committees[
-                        committeeNames[currentCommitteeIndex]
-                      ].others.map((student: Student, index: number) => (
-                        <StudentCard key={index} student={student} />
-                      ))}
-                      <div className="col-span-full"></div>
+                      {committees[committeeNames[currentCommitteeIndex]].others.map(
+                        (student: Student, index: number) => (
+                          <div key={index} className="w-[250px]">
+                            <StudentCard student={student} />
+                          </div>
+                        )
+                      )}
+                      <div className="w-full"></div>
                     </>
                   )}
-                  {committees[committeeNames[currentCommitteeIndex]].noPosition
-                    .length > 0 && (
+                  {committees[committeeNames[currentCommitteeIndex]].noPosition.length > 0 && (
                     <>
-                      {committees[
-                        committeeNames[currentCommitteeIndex]
-                      ].noPosition.map((student: Student, index: number) => (
-                        <StudentCard key={index} student={student} />
-                      ))}
+                      {committees[committeeNames[currentCommitteeIndex]].noPosition.map(
+                        (student: Student, index: number) => (
+                          <div key={index} className="w-[250px]">
+                            <StudentCard student={student} />
+                          </div>
+                        )
+                      )}
                     </>
                   )}
                 </div>
