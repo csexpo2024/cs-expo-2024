@@ -78,7 +78,7 @@ const Expo = () => {
           <p>A</p>
           <p className="tracking-[-3rem]">Y1</p>
         </motion.div>
-        <div className="flex flex-col gap-32 p-14 lg:p-44 z-50">
+        <div id="schedule" className="flex flex-col gap-32 p-14 lg:p-44 z-50">
           <EventInfo
             title="CS Expo Day 1"
             subtitle="November 19, 2024 | 8:00 AM - 5:00 PM "
@@ -130,7 +130,7 @@ const Expo = () => {
         </div>
       </section>
       <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-24">
-        <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
+        <h1 id="panelist" className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
         <Carousel className="w-full max-w-full">
           <CarouselContent>
             {panelists.map((panelist, i) => (
@@ -146,7 +146,7 @@ const Expo = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <h1 className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
+        <h1 id="speakers" className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
         <Carousel className="w-full max-w-full text-right">
           <CarouselContent>
             {speakers.map((speaker, i) => (

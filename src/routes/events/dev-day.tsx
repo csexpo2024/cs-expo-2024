@@ -74,7 +74,7 @@ const DevDay = () => {
             <p className="tracking-[-3rem]">3Y</p>
           </div>
         </motion.div>
-        <div className="flex flex-col gap-32 p-14 lg:p-44 z-40 items-end text-right">
+        <div id = "schedule" className="flex flex-col gap-32 p-14 lg:p-44 z-40 items-end text-right">
           <EventInfo
             title="Dev Day"
             subtitle="November 22, 2024 | 8:00 AM - 1:00 PM"
@@ -110,7 +110,7 @@ const DevDay = () => {
       </motion.section>
       <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-24">
         <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Speakers</h1>
-        <Carousel className="w-full max-w-full">
+        <Carousel id="speakers" className="w-full max-w-full">
           <CarouselContent>
             {/* TODO: replace with actual content */}
             {speakers.map((speaker, i) => (
