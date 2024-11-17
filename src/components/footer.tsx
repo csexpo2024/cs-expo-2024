@@ -19,10 +19,10 @@ const Footer = () => {
                   <Link to="/events/cs-expo#schedule">Schedule</Link>
                 </li>
                 <li>
-                  <Link to="/events/cs-expo#speakers">Speakers</Link>
+                  <Link to="/events/cs-expo#panelist">Panelists</Link>
                 </li>
                 <li>
-                  <Link to="/events/cs-expo#gallery">Gallery</Link>
+                  <Link to="/events/cs-expo#speakers">Speakers</Link>
                 </li>
               </ul>
             </div>
@@ -38,9 +38,6 @@ const Footer = () => {
                 <li>
                   <Link to="/events/dev-day#speakers">Speakers</Link>
                 </li>
-                <li>
-                  <Link to="/events/dev-day#gallery">Gallery</Link>
-                </li>
               </ul>
             </div>
             <div>
@@ -50,7 +47,7 @@ const Footer = () => {
                   <Link to="/projects">Collection</Link>
                 </li>
                 <li>
-                  <Link to="/projects#gallery">Gallery</Link>
+                  <Link to="/projects/hall-of-fame">Hall of Fame</Link>
                 </li>
               </ul>
             </div>
