@@ -36,7 +36,7 @@ const Projects = () => {
   return (
     <div className="bg-[#110101] min-h-screen">
       <section className="flex flex-col justify-center items-center py-8">
-        <h1 className="text-4xl md:text-6xl text-left text-red-600 font-heading-italic">
+        <h1 className="text-4xl md:text-6xl text-center text-red-600 font-heading-italic">
           Projects Collection
         </h1>
       </section>
