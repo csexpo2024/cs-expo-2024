@@ -38,7 +38,7 @@ export const panelists: Panelist[] = [
   {
     full_name: "Dr. Hadji J. Tejuco",
     bionote: `Dr. Hadji is an educator in the field of computer science. Currently serving as a faculty member in the Computer Science department, Dr. Tejuco has a rich educational background, marked by an array of advanced degrees.`,
-    img_url: "/img/panelists/tejuco.png"
+    img_url: "/img/panelists/tejuco.jpg"
   },
   {
     full_name: "Ms. May Florence D. San Pablo",
