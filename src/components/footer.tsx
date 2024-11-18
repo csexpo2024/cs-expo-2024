@@ -1,4 +1,4 @@
-import { Facebook } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import Logo from "@/assets/img/logo-silver-cropped.png";
 
 import { Link } from "react-router-dom";
@@ -97,6 +97,13 @@ const Footer = () => {
             rel="norefferer noopener"
           >
             <Facebook className="h-10 w-10" />
+          </a>
+          <a
+            href="https://www.instagram.com/fit_cs_expo"
+            target="_blank"
+            rel="norefferer noopener"
+          >
+            <Instagram className="h-10 w-10" />
           </a>
         </div>
         <p>2024</p>
