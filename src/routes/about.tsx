@@ -12,7 +12,7 @@ import AgathaLogo from "@/assets/img/team-logo/agatha-logo.png";
 import LMNTRXLogo from "@/assets/img/team-logo/lmntrx-logo.png";
 import StrawhatsLogo from "@/assets/img/team-logo/strawhats-logo.png";
 import CodeGeassLogo from "@/assets/img/team-logo/codegeass-logo.png";
-import HurtzLogo from "@/assets/img/team-logo/hurtz-logo.jpg";
+import HurtzLogo from "@/assets/img/team-logo/hurtz-logo.png";
 import LoremIpsumLogo from "@/assets/img/team-logo/loremipsum-logo.png";
 import SamsanLogo from "@/assets/img/team-logo/samsan-logo.png";
 import CodexLogo from "@/assets/img/team-logo/codex-logo.png";

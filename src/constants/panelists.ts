@@ -8,7 +8,7 @@ export const panelists: Panelist[] = [
   {
     full_name: "Dr. Beau Gray M. Habal",
     bionote: `Dr. Beau Gray Habal is a highly accomplished teacher with an impressive 20 years of experience in the field of education. Currently serving as a professor at FEU Institute of Technology, she has also taught at other universities locally and abroad. Ms. Beau's exceptional teaching skills and her dedication to providing her students with a quality education have made her a highly respected and sought-after teacher in the field of computer science.`,
-    img_url: "/img/panelists/habal.png"
+    img_url: "/img/panelists/habal.jpg"
   },
   {
     full_name: "Dr. Jennalyn G. Raviz",
@@ -38,7 +38,7 @@ export const panelists: Panelist[] = [
   {
     full_name: "Dr. Hadji J. Tejuco",
     bionote: `Dr. Hadji is an educator in the field of computer science. Currently serving as a faculty member in the Computer Science department, Dr. Tejuco has a rich educational background, marked by an array of advanced degrees.`,
-    img_url: "/img/panelists/tejuco.png"
+    img_url: "/img/panelists/tejuco.jpg"
   },
   {
     full_name: "Ms. May Florence D. San Pablo",
