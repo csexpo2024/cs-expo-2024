@@ -129,9 +129,9 @@ const Expo = () => {
           />
         </div>
       </section>
-      <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-24">
+      <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-4 lg:px-24">
         <h1 id="panelist" className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
-        <Carousel className="w-full max-w-full">
+        <Carousel className="w-full max-w-[95vw] lg:max-w-full">
           <CarouselContent>
             {panelists.map((panelist, i) => (
               <CarouselItem key={i}>
@@ -147,7 +147,7 @@ const Expo = () => {
           <CarouselNext />
         </Carousel>
         <h1 id="speakers" className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
-        <Carousel className="w-full max-w-full text-right">
+        <Carousel className="w-full max-w-[95vw] lg:max-w-full text-right">
           <CarouselContent>
             {speakers.map((speaker, i) => (
               speaker.is_cs_expo &&
