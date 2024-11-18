@@ -77,7 +77,7 @@ const DevDay = () => {
         <div id = "schedule" className="flex flex-col gap-32 p-14 lg:p-44 z-40 items-end text-right">
           <EventInfo
             title="Dev Day"
-            subtitle="November 22, 2024 | 8:00 AM - 1:00 PM"
+            subtitle="November 22, 2024 | 10:00 AM - 2:00 PM"
             body="Deserving thesis groups and students will receive an award for their innovation and research
             prowess on the day of the event. A symposium highlighting the current state of computer science.
             Dev Day will feature talks from prominent industry professionals about the software re-engineering and
@@ -88,7 +88,7 @@ const DevDay = () => {
           />
           <EventInfo
             title="Keynote Talks"
-            subtitle="New skills for new realities: staying ahead in a changing world"
+            subtitle="New skills for new realities: skills for a changing world"
             body="In an era of rapid technological advancements and shifting job landscapes, staying
             relevant requires constant adaptation and the acquisition of new skills. This keynote
             will explore the evolving skill sets necessary to thrive in today's ever-changing world.

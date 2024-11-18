@@ -177,19 +177,19 @@ const Landing = () => {
             <div>
               <p className="font-heading text-4xl">CS EXPO DAY 1</p>
               <p className="text-yellow-500 uppercase">
-                November 19, 2024 | 8:00 AM - 5:00 PM
+                November 19, 2024 | 10:00 AM - 4:00 PM
               </p>
             </div>
             <div>
               <p className="font-heading text-4xl">CS EXPO DAY 2</p>
               <p className="text-yellow-500 uppercase">
-                November 20, 2024 | 8:00 AM - 5:00 PM
+                November 20, 2024 | 10:00 AM - 3:00 PM
               </p>
             </div>
             <div>
               <p className="font-heading text-4xl">DEV DAY</p>
               <p className="text-yellow-500 uppercase">
-                November 22, 2024 | 8:00 AM - 1:00 PM
+                November 22, 2024 | 10:00 AM - 2:00 PM
               </p>
             </div>
           </motion.div>
