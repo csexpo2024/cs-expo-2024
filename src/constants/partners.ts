@@ -73,7 +73,7 @@ export const majors: Partner[] = [
     ig: "https://www.instagram.com/jpcs_fit",
   },
   {
-    name: 'Computer Science Student Org (CSSO)',
+    name: 'Computer Science Student Org. (CSSO)',
     logo: '/img/partners/csso.png',
     fb: "https://www.facebook.com/CSSO2016",
   },
@@ -96,7 +96,7 @@ export const majors: Partner[] = [
 
 export const minors: Partner[] = [
   {
-    name: 'JPSC Asia Pacific College',
+    name: 'JPCS Asia Pacific College',
     logo: '/img/partners/jpcs-apc.png',
     fb: "https://www.facebook.com/JPCSAPC/",
     ig: "https://www.instagram.com/jpcs_apc",
@@ -107,7 +107,7 @@ export const minors: Partner[] = [
     fb: "https://www.facebook.com/PUPASCII",
   },
   {
-    name: 'PUP Taguig Comptuer Society',
+    name: 'PUP Taguig Computer Society',
     logo: '/img/partners/pup-cs.png',
     fb: "https://www.facebook.com/PUPTCS",
     ig: "https://www.instagram.com/puptcs",
