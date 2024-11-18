@@ -81,7 +81,7 @@ const Expo = () => {
         <div id="schedule" className="flex flex-col gap-32 p-14 lg:p-44 z-50">
           <EventInfo
             title="CS Expo Day 1"
-            subtitle="November 19, 2024 | 8:00 AM - 5:00 PM "
+            subtitle="November 19, 2024 | 10:00 AM - 4:00 PM "
             body="Join the first day of CS EXPO, as bright fourth-year students present their innovative theses with topics regarding data analytics, 
             health, and natural language processing. Under the data analytics category are groups Agatha, LMNTRX, 
             and Strawhats. For the health category, Code Geass, Hurtz, Lorem Ipsum, and Samsan. Lastly, for the
@@ -111,7 +111,7 @@ const Expo = () => {
         <div className="flex flex-col gap-32 p-14 lg:p-44 z-50">
           <EventInfo
             title="CS Expo Day 2"
-            subtitle="November 20, 2024 | 8:00 AM - 5:00 PM "
+            subtitle="November 20, 2024 | 10:00 AM - 3:00 PM "
             body="Creating breakthroughs for the computer vision category are the groups that will be 
             presenting on the second day of the CS Expo event. These groups are Algoriteam, Code, 
             Computer Science Global Offensive, GIGGA, HUI, IntelliWatch, JLNN, Lambda, Puno ng 
