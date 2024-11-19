@@ -57,6 +57,8 @@ const DevDay = () => {
           DEV DAY
         </motion.h1>
       </motion.section>
+      <div id="schedule" className="h-1 bg-[#1F0303] overflow-hidden">
+      </div>
       <motion.section 
         ref={day3Ref}
         className="bg-[#1F0303] relative pointer-events-none md:pb-28 overflow-hidden"
@@ -74,7 +76,7 @@ const DevDay = () => {
             <p className="tracking-[-3rem]">3Y</p>
           </div>
         </motion.div>
-        <div id = "schedule" className="flex flex-col gap-32 p-14 lg:p-44 z-40 items-end text-right">
+        <div className="flex flex-col gap-32 p-14 lg:p-44 z-40 items-end text-right">
           <EventInfo
             title="Dev Day"
             subtitle="November 22, 2024 | 10:00 AM - 2:00 PM"
@@ -108,9 +110,11 @@ const DevDay = () => {
           />
         </div>
       </motion.section>
+      <div id="speakers" className="h-1 bg-[#1F0303] overflow-hidden">
+      </div>
       <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-24">
         <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Speakers</h1>
-        <Carousel id="speakers" className="w-full max-w-full">
+        <Carousel id="speaks" className="w-full max-w-full">
           <CarouselContent>
             {/* TODO: replace with actual content */}
             {speakers.map((speaker, i) => (
