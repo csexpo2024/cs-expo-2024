@@ -17,7 +17,7 @@ const Partners = () => {
           Who Make It All Possible
         </h2>
       </section>
-      <section>
+      <section id="tape">
         {/* Caution Tape divider */}
         <div className="flex h-10 p-0 justify-center items-center overflow-hidden pointer-events-none -rotate-1">
           <img
@@ -35,17 +35,22 @@ const Partners = () => {
         subtitle="Expanding our reach"
         partners={medias}
       />
+      {/* Caution Tape Footer */}
+      <div id="major" className="h-10 overflow-hidden">
+      </div>
       {/* Major Partners */}
       <PartnerGroup
-        id="major"
+        id="majorgroup"
         title="Major Partners"
         subtitle="Our Primary Partners"
         partners={majors}
         reverse
       />
+      <div id="minor" className="h-10 overflow-hidden">
+      </div>
       {/* Minor Partners */}
       <PartnerGroup
-        id="minor"
+        id="minors"
         title="Minor Partners"
         subtitle="Our Supoprting Partners"
         partners={minors}

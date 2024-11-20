@@ -55,7 +55,7 @@ const Footer = () => {
               <p className="font-bold">Our Partners</p>
               <ul>
                 <li>
-                  <Link to="/partners#media">Media Partners</Link>
+                  <Link to="/partners#tape">Media Partners</Link>
                 </li>
                 <li>
                   <Link to="/partners#major">Major Partners</Link>

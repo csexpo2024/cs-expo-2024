@@ -129,8 +129,10 @@ const Expo = () => {
           />
         </div>
       </section>
+      <div id="panelist" className="h-5 bg-[#1F0303] overflow-hidden">
+      </div>
       <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-4 lg:px-24">
-        <h1 id="panelist" className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
+        <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
         <Carousel className="w-full max-w-[95vw] lg:max-w-full">
           <CarouselContent>
             {panelists.map((panelist, i) => (
@@ -146,7 +148,9 @@ const Expo = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <h1 id="speakers" className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
+        <div id="speakers" className="h-1 bg-[#1F0303] overflow-hidden">
+      </div>
+        <h1 className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
         <Carousel className="w-full max-w-[95vw] lg:max-w-full text-right">
           <CarouselContent>
             {speakers.map((speaker, i) => (
