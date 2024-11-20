@@ -28,7 +28,7 @@ export const PolaroidArticle = ({
         <p className="font-heading-italic text-2xl text-yellow-500 mb-2">
           {title}
         </p>
-        <p className="font-semibold">{body}</p>
+        <p>{body}</p>
       </div>
     </div>
   );
