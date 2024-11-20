@@ -32,5 +32,30 @@ export const speakers: Speaker[] = [
     `,
     img_url: "/img/speakers/arana.png",
     is_cs_expo: false
+  },
+  {
+    full_name: "Cads Cada",
+    bionote: `Cads heads the Strategy and Transformation Office of the Technology and Operations group of GCash. As an agent of change, he is in charge of defining the transformation roadmap of the group, and orchestrates strategic execution with cross functional teams. He also leads the Automation Center of Excellence, and champions better ways through automation across the
+    GCash organization.
+
+    Cads earned his bachelor's degree in BS - Management from Ateneo de Manila University. With over 15 years of experience in both Banking and Fintech, Cads has a rich background in strategy, program management, operations, and business process enhancement.`,
+    img_url: "/img/speakers/cada.png",
+    is_cs_expo: true
+  },
+  {
+    full_name: "Sheila A. Dela Peña",
+    bionote: `Sheila Dela Pena is the Head for EPMO - Delivery Enablement & Governance at GCash, the leading mobile wallet in the Philippines. With extensive experience in project management, operations, and governance, She specializes in driving strategic initiatives, ensuring operational excellence, and fostering collaboration across teams. Her leadership in delivery enablement has been instrumental in streamlining processes and enhancing service quality, contributing to GCash’s mission of financial inclusion and innovation.
+ 
+    Sheila has been with GCash since 2016 and has driven transformation programs for the Mobile App Transformation and Agile ways of working.
+    Prior to joining GCash, she had more than 10 years of experience in Digital Marketing and co-founded the Search Engine Optimization PH, a non-profit organization aimed at empowering and educating Filipinos on digital marketing and analytics. Sheila graduated with a Bachelor in Communications degree from Pamantasan ng Lungsod ng Maynila in 2004.
+    `,
+    img_url: "/img/speakers/delapena.png",
+    is_cs_expo: false
+  },
+  {
+    full_name: "Calen Legaspi",
+    bionote: `Calen Legaspi is the Founder and Chief Scientist of Orange & Bronze Software Labs, the premiere software development and technical consulting firm in the Philippines for over 19 years. His company was the first to adopt Agile in the Philippines, and the first to provide Agile and DevOps training. Legaspi is highly skilled in Test-Driven Development and Domain-Driven Design and has held leadership roles including CEO at Orange & Bronze and board member positions with the Philippine Software Industry Association and Edusuite. Additionally, he contributes to academia as a senior lecturer at De La Salle University.`,
+    img_url: "/img/speakers/legaspi.png",
+    is_cs_expo: false
   }
 ];
