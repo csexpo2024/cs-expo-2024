@@ -11,7 +11,9 @@ const Partners = () => {
     <div className="bg-[#110101]">
       {/* Hero Section */}
       <section className="flex flex-col fade-backdrop justify-center md:items-center box-pattern px-12 py-36">
-        <h1 className="text-5xl lg:text-7xl font-heading-italic text-center">Our Partners</h1>
+        <h1 className="text-5xl lg:text-7xl font-heading-italic text-center text-red-600 drop-shadow-[-8px_8px_0_rgba(0,0,0,1)]">
+          OUR PARTNERS
+        </h1>
         <h2 className="text-2xl font-medium text-yellow-500 text-center">
           This Event is Brought to You by Our Generous Partners and Supporters
           Who Make It All Possible

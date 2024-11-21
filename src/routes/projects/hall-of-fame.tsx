@@ -266,44 +266,48 @@ const HallOfFame = () => {
   return (
     <div className="box-pattern min-h-screen w-full overflow-x-hidden">
       <div className="w-full mx-auto px-4">
-        <section className="flex flex-col justify-center items-center py-4 md:py-8">
-          <h1 className="text-3xl md:text-6xl text-center text-red-600 font-heading-italic mb-8 md:mb-12 w-full">
+        <section className="flex flex-col fade-backdrop justify-center md:items-center box-pattern px-12 py-36">
+          <h1 className="text-5xl lg:text-7xl font-heading-italic text-center text-red-600 drop-shadow-[-8px_8px_0_rgba(0,0,0,1)]">
             HALL OF FAME
           </h1>
+          <h2 className="text-2xl font-medium text-yellow-500 text-center">
+          Excellence deserves recognition. At CS EXPO 2024, we honor visionary individuals 
+          and teams whose dedication to research, innovation, and technical expertise has 
+          redefined the boundaries of computer science.
+          </h2>
+        </section>
+        <div className="flex flex-col w-full">
+          {/* Regular categories */}
+          {categories.map(renderCategorySection)}
 
-          <div className="flex flex-col w-full">
-            {/* Regular categories */}
-            {categories.map(renderCategorySection)}
+          {/* Best by Category Section */}
+          {renderBestByCategory()}
 
-            {/* Best by Category Section */}
-            {renderBestByCategory()}
-
-            {/* Best Mentor Section */}
-            <SectionWrapper index={categories.length + 1}>
-              <SectionTitle
-                title={bestMentor.title}
-                titleColor={bestMentor.titleColor}
-              />
-              <div className="flex-1 p-8">
-                <div className="flex justify-center">
-                  <div className="flex flex-col items-center max-w-md">
-                    <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full">
-                      <img
-                        src={bestMentor.winner.image}
-                        alt={bestMentor.winner.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="text-white text-center mt-4">
-                      <div className="text-2xl font-content font-bold">{bestMentor.winner.name}</div>
-                      <div className="text-sm font-content">{bestMentor.winner.details}</div>
-                    </div>
+          {/* Best Mentor Section */}
+          <SectionWrapper index={categories.length + 1}>
+            <SectionTitle
+              title={bestMentor.title}
+              titleColor={bestMentor.titleColor}
+            />
+            <div className="flex-1 p-8">
+              <div className="flex justify-center">
+                <div className="flex flex-col items-center max-w-md">
+                  <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full">
+                    <img
+                      src={bestMentor.winner.image}
+                      alt={bestMentor.winner.name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="text-white text-center mt-4">
+                    <div className="text-2xl font-content font-bold">{bestMentor.winner.name}</div>
+                    <div className="text-sm font-content">{bestMentor.winner.details}</div>
                   </div>
                 </div>
               </div>
-            </SectionWrapper>
-          </div>
-        </section>
+            </div>
+          </SectionWrapper>
+        </div>
       </div>
     </div>
   );

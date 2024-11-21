@@ -34,11 +34,18 @@ const Projects = () => {
   };
 
   return (
-    <div className="bg-[#110101] min-h-screen">
-      <section className="flex flex-col justify-center items-center py-8">
-        <h1 className="text-4xl md:text-6xl text-center text-red-600 font-heading-italic">
-          Projects Collection
+    <div className="bg-[#110101] min-h-screen ">
+      <section className="flex flex-col fade-backdrop justify-center md:items-center box-pattern px-12 py-36">
+        <h1 className="text-5xl lg:text-7xl font-heading-italic text-center text-red-600 drop-shadow-[-8px_8px_0_rgba(0,0,0,1)]">
+          PROJECTS COLLECTION
         </h1>
+        <h2 className="text-2xl font-medium text-yellow-500 text-center">
+          Discover the innovative solutions and groundbreaking ideas showcased at CS EXPO 2024. 
+          This curated collection of projects — organized by category — reflects the students' 
+          commitment to our theme, "Unveiling possibilities and creating new realities." Each 
+          project is a testament to their creativity, technical expertise, and vision for driving 
+          progress, demonstrating their readiness to contribute to a rapidly evolving world.
+        </h2>
       </section>
 
       <section className="flex flex-col items-center gap-4 px-4">
@@ -95,33 +102,51 @@ const Projects = () => {
                       </p>
                       <div className="text-xs text-gray-400">
                         <p className="mb-2">
-                          <span className="text-red-600 font-semibold">
+                          <span className="text-red-600 font-semibold text-base">
                             Group:
                           </span>{" "}
-                          {project.group}
+                          <span className="font-semibold">{project.group}</span>
                         </p>
                         {project.tags && (
                           <>
                             <p className="mb-1">
-                              <span className="text-red-600 font-semibold">
+                              <span className="text-red-600 font-semibold text-base">
                                 Members:
                               </span>
                               <br />
-                              {project.tags.members.join(", ")}
+                              {project.tags.members.map((member, index) => (
+                                <span key={index} className="flex items-center gap-2">
+                                  <span className="text-red-600">•</span>
+                                  <span className="font-semibold">{member}</span>
+                                  <br />
+                                </span>
+                              ))}
                             </p>
                             <p className="mb-1">
-                              <span className="text-red-600 font-semibold">
+                              <span className="text-red-600 font-semibold text-base">
                                 Mentor:
                               </span>
                               <br />
-                              {project.tags.mentor.join(", ")}
+                              {project.tags.mentor.map((mentor, index) => (
+                                <span key={index} className="flex items-center gap-2">
+                                  <span className="text-red-600">•</span>
+                                  <span className="font-semibold">{mentor}</span>
+                                  <br />
+                                </span>
+                              ))}
                             </p>
                             <p>
-                              <span className="text-red-600 font-semibold">
+                              <span className="text-red-600 font-semibold text-base">
                                 Concepts:
                               </span>
                               <br />
-                              {project.tags.concepts.join(", ")}
+                              {project.tags.concepts.map((concept, index) => (
+                                <span key={index} className="flex items-center gap-2">
+                                  <span className="text-red-600">•</span>
+                                  <span className="font-semibold">{concept}</span>
+                                  <br />
+                                </span>
+                              ))}
                             </p>
                           </>
                         )}
