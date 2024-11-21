@@ -131,7 +131,7 @@ const Expo = () => {
       </section>
       <div id="panelist" className="h-5 bg-[#1F0303] overflow-hidden">
       </div>
-      <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-4 lg:px-24">
+      <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-12 lg:px-24 overflow-x-hidden">
         <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Panelists</h1>
         <Carousel className="w-full max-w-[95vw] lg:max-w-full">
           <CarouselContent>
@@ -148,10 +148,9 @@ const Expo = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-        <div id="speakers" className="h-1 bg-[#1F0303] overflow-hidden">
-      </div>
+        <div id="speakers" className="h-1 bg-[#1F0303] overflow-hidden" />
         <h1 className="font-heading text-4xl lg:text-5xl py-10 mt-10">Speakers</h1>
-        <Carousel className="w-full max-w-[95vw] lg:max-w-full text-right">
+        <Carousel className="w-full max-w-[95vw] lg:max-w-full lg:text-right">
           <CarouselContent>
             {speakers.map((speaker, i) => (
               speaker.is_cs_expo &&

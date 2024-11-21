@@ -112,7 +112,7 @@ const DevDay = () => {
       </motion.section>
       <div id="speakers" className="h-1 bg-[#1F0303] overflow-hidden">
       </div>
-      <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-24">
+      <section className="flex flex-col items-center bg-[#1F0303] pb-20 px-12 lg:px-24 overflow-x-hidden">
         <h1 className="font-heading text-4xl lg:text-5xl py-10 z-10">Speakers</h1>
         <Carousel id="speaks" className="w-full max-w-full">
           <CarouselContent>
