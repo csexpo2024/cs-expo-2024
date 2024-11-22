@@ -75,10 +75,10 @@ const Project = () => {
   }
 
   return (
-    <div className="">
+    <div className="relative">
       <div className="px-4 xl:px-52">
         <div
-          className="group-backdrop sm:mx-28 absolute z-[0] max-w-full h-[500px] right-0 top-0 left-0 bg-center bg-no-repeat bg-cover animate-fade-in duration-700"
+          className="group-backdrop sm:mx-28 absolute z-[0] max-w-full h-[900px] right-0 top-0 left-0 bg-center bg-no-repeat bg-cover animate-fade-in duration-700"
           style={{
             backgroundImage:
               project?.title === "MLFDS"
@@ -89,7 +89,7 @@ const Project = () => {
         <img
           rel="preload"
           src={`/img/team/${project?.groupid}.jpg`}
-          className="h-[250px] sm:h-[350px] opacity-0 bg-opacity-0 bg-transparent"
+          className="h-[550px] sm:h-[750px] opacity-0 bg-opacity-0 bg-transparent"
           alt=""
         />
         <div className="sm:grid grid-cols-4 sm:gap-8 relative z-10">
