@@ -1,4 +1,4 @@
-import ExpoBg from "@/assets/img/bg/dev-day-hero.png";
+import ExpoBg from "@/assets/img/bg/dev-day-hero.jpg";
 
 import { PolaroidArticle } from "@/components/polaroid-article";
 import { EventInfo } from "@/components/event-info";
