@@ -50,6 +50,12 @@ export const medias: Partner[] = [
     ig: "https://www.instagram.com/banderaphl/",
     web: "https://bandera.inquirer.net/",
   },
+  {
+    name: 'The Innovator',
+    logo: 'img/partners/theinnovator.png',
+    fb: "https://www.facebook.com/theinnovatormedia",
+    ig: "https://www.instagram.com/theinnovatormedia",
+  }
 ];
 
 export const majors: Partner[] = [
