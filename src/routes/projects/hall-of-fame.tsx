@@ -16,6 +16,7 @@ type Category = {
   title: string;
   entries: string[] | (string | string[])[];
   titleColor: string;
+  category?: string;
 };
 
 // Reusable components
@@ -41,10 +42,12 @@ const RankBadge = ({ rank }: { rank: number }) => {
 const ProjectCard = ({
   entry,
   rank,
+  category,
   isLarge = false,
 }: {
   entry: string | string[];
   rank?: number;
+  category?: string;
   isLarge?: boolean;
 }) => {
   const singleEntry = (projectKey: string): React.ReactNode => {
@@ -57,11 +60,21 @@ const ProjectCard = ({
       <>
         <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full relative">
           {rank && <RankBadge rank={rank} />}
-          <img
-            src={projects[projectKey].gallery[0].url}
+          {!category && <img
+            src={projects[projectKey].entry}
             alt={projects[projectKey].group}
             className="w-full h-full object-cover"
-          />
+          />}
+          {category === "presenter" && <img
+            src={projects[projectKey].presenter_entry}
+            alt={projects[projectKey].group}
+            className="w-full h-full object-cover"
+          />}
+          {category === "poster" && <img
+            src={projects[projectKey].poster_entry}
+            alt={projects[projectKey].group}
+            className="w-full h-full object-cover"
+          />}
         </div>
         <div
           className={`flex flex-col justify-between flex-grow w-full text-white mt-4 ${
@@ -95,11 +108,21 @@ const ProjectCard = ({
               <CarouselItem key={groupEntryIndex}>
                 <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full relative">
                   {rank && <RankBadge rank={rank} />}
-                  <img
-                    src={projects[groupEntry].gallery[0].url}
+                  {!category && <img
+                    src={projects[groupEntry].entry}
                     alt={projects[groupEntry].group}
                     className="w-full h-full object-cover"
-                  />
+                  />}
+                  {category === "presenter" && <img
+                    src={projects[groupEntry].presenter_entry}
+                    alt={projects[groupEntry].group}
+                    className="w-full h-full object-cover"
+                  />}
+                  {category === "poster" && <img
+                    src={projects[groupEntry].poster_entry}
+                    alt={projects[groupEntry].group}
+                    className="w-full h-full object-cover"
+                  />}
                 </div>
                 <div
                   className={`flex flex-col justify-between flex-grow w-full text-white mt-4 ${
@@ -114,7 +137,7 @@ const ProjectCard = ({
                   </div>
                   <div className="flex justify-center mt-4 font-content">
                     <Link to={`/projects/${groupEntry}`}>
-                      <Button variant="ghost" size="sm">
+                      <Button variant="outline" size="sm">
                         Learn More
                       </Button>
                     </Link>
@@ -183,6 +206,7 @@ const HallOfFame = () => {
       title: "BEST PRESENTER",
       entries: ["mimical", "book-i", "carident"],
       titleColor: "text-yellow-400",
+      category: "presenter"
     },
     {
       title: "BEST AVP",
@@ -193,6 +217,7 @@ const HallOfFame = () => {
       title: "BEST POSTER",
       entries: ["onics", ["agila", "book-i", "ultrascan"], ["elixir", "intelliwatch"]],
       titleColor: "text-yellow-400",
+      category: "poster"
     },
   ];
 
@@ -211,7 +236,7 @@ const HallOfFame = () => {
     winner: {
       name: "Mr. Abraham Magpantay",
       image: MagpantayImg,
-      details: "",
+      details: "A sincere thank you to Mr. Abraham Magpantay, whose unwavering guidance and dedication have been invaluable to the success of these thesis students. Your expertise, support, and encouragement have shaped their journeys, and for that, they are truly grateful. Please continue to inspire and guide future students, as your impact reaches far beyond!",
     },
     titleColor: "text-yellow-400",
   };
@@ -226,7 +251,7 @@ const HallOfFame = () => {
               key={entryIndex}
               className="w-full justify-self-center"
             >
-              <ProjectCard entry={entry} rank={entryIndex + 1} />
+              <ProjectCard entry={entry} rank={entryIndex + 1} category={category.category} />
             </div>
           ))}
         </div>
@@ -251,8 +276,8 @@ const HallOfFame = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-2" />
-          <CarouselNext className="right-2" />
+          <CarouselPrevious className="left-[-3rem] lg:left-2" />
+          <CarouselNext className="right-[-3rem] lg:right-2" />
         </Carousel>
       </div>
     </SectionWrapper>
