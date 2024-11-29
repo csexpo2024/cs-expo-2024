@@ -18,7 +18,7 @@ export interface Project {
     description: string;
     avp: string;
     tags?: Tags;
-    gallery?: Photo[];
+    gallery: Photo[];
 }
 
 /* TODO: fill avp link */
