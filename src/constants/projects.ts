@@ -18,7 +18,10 @@ export interface Project {
     description: string;
     avp: string;
     tags?: Tags;
-    gallery?: Photo[];
+    gallery: Photo[];
+    entry?: string;
+    poster_entry?: string;
+    presenter_entry?: string;
 }
 
 /* TODO: fill avp link */
@@ -60,8 +63,10 @@ export const projects: Record<string, Project> = {
             {
                 name: "Ella Belle Wong",
                 url: "/img/gallery/agatha/wong.jpg"
-            }
-        ]
+            },
+        ],
+        entry: "/img/entries/agila.jpg",
+        poster_entry: "/img/entries/posters/agila.jpg",
     },
     "meowtion": {
         title: "MEOWTION CAPTURE",
@@ -197,7 +202,9 @@ export const projects: Record<string, Project> = {
                 name: "Geryko Manarang",
                 url: "/img/gallery/codegeass/manarang.jpg"
             }
-        ]
+        ],
+        entry: "/img/entries/carident.jpg",
+        presenter_entry: "/img/entries/presenters/carident.jpg"
     },
     "tala": {
         title: "Tala",
@@ -277,7 +284,8 @@ export const projects: Record<string, Project> = {
                 name: "Adriane Gil S. Roa",
                 url: "/img/gallery/csgo/roa.jpg"
             }
-        ]
+        ],
+        entry: "/img/entries/csgo.jpg",
     },
     "mimical": {
         title: "Mimical",
@@ -313,7 +321,8 @@ export const projects: Record<string, Project> = {
                 name: "Manuel Thomas",
                 url: "/img/gallery/ctrlaltdelete/thomas.jpg"
             }
-        ]
+        ],
+        presenter_entry: "/img/entries/presenters/mimical.jpg"
     },
     "ensys-chat": {
         title: "Ensys Chat",
@@ -425,7 +434,8 @@ export const projects: Record<string, Project> = {
                 name: "Shahani Fe D. Vicio",
                 url: "/img/gallery/hui/vicio.jpg"
             }
-        ]
+        ],
+        poster_entry: "/img/entries/posters/elixir.jpg",
     },
     "onics": {
         title: "Onics",
@@ -465,7 +475,8 @@ export const projects: Record<string, Project> = {
                 name: "Albert Kobe C. Serrano",
                 url: "/img/gallery/hurtz/serrano.jpg"
             }
-        ]
+        ],
+        poster_entry: "/img/entries/posters/onics.jpg",
     },
     "intelliwatch": {
         title: "Intelliwatch",
@@ -505,7 +516,9 @@ export const projects: Record<string, Project> = {
                 name: "Cyfer Nikolai Supleo",
                 url: "/img/gallery/intelliwatch/supleo.jpg"
             }
-        ]
+        ],
+        entry: "/img/entries/intelliwatch.jpg",
+        poster_entry: "/img/entries/posters/intelliwatch.jpg",
     },
     "book-i": {
         title: "Book-I",
@@ -545,7 +558,10 @@ export const projects: Record<string, Project> = {
                 name: "Henrick Brian M. Nadonga",
                 url: "/img/gallery/jathrosmatrix/nadonga.jpg"
             }
-        ]
+        ],
+        entry: "/img/entries/book-i.jpg",
+        poster_entry: "/img/entries/posters/book-i.jpg",
+        presenter_entry: "/img/entries/presenters/book-i.jpg"
     },
     "marikit": {
         title: "Marikit",
@@ -781,7 +797,8 @@ export const projects: Record<string, Project> = {
                 name: "Rylan Cedric E. Torres",
                 url: "/img/gallery/pnp/torres.jpg"
             }
-        ]
+        ],
+        entry: "/img/entries/pnp.jpg",
     },
     "ultrascan": {
         title: "UltraScan",
@@ -817,7 +834,8 @@ export const projects: Record<string, Project> = {
                 name: "Eleazar Tan",
                 url: "/img/gallery/samsan/tan.jpg"
             }
-        ]
+        ],
+        poster_entry: "/img/entries/posters/ultrascan.jpg",
     },
     "smish-x": {
         title: "Smish X",

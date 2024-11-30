@@ -1,4 +1,4 @@
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {
   Carousel,
@@ -7,29 +7,23 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-//import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
-import LogoSilver from "@/assets/img/logo-silver.png";
-
-type Entry = {
-  id: string;
-  image: string;
-  research_title: string;
-  group: string;
-  rank?: number;
-};
+import MagpantayImg from "/img/panelists/magpantay.jpg";
+import { projects } from "@/constants/projects";
 
 type Category = {
   title: string;
-  entries: Entry[];
+  entries: string[] | (string | string[])[];
   titleColor: string;
+  category?: string;
 };
 
 // Reusable components
 const RankBadge = ({ rank }: { rank: number }) => {
   const frames = {
     1: { text: "1st Place", className: "bg-yellow-500" },
-    2: { text: "2nd Place", className: "bg-gray-300" },
+    2: { text: "2nd Place", className: "bg-gray-500" },
     3: { text: "3rd Place", className: "bg-amber-600" },
   };
 
@@ -38,7 +32,7 @@ const RankBadge = ({ rank }: { rank: number }) => {
 
   return (
     <div
-      className={`absolute top-2 left-2 ${frame.className} text-white px-3 py-1 rounded-md font-bold shadow-lg`}
+      className={`absolute top-2 left-2 ${frame.className} text-white px-3 py-1 rounded-md font-bold shadow-md`}
     >
       {frame.text}
     </div>
@@ -47,43 +41,120 @@ const RankBadge = ({ rank }: { rank: number }) => {
 
 const ProjectCard = ({
   entry,
+  rank,
+  category,
   isLarge = false,
 }: {
-  entry: Entry;
+  entry: string | string[];
+  rank?: number;
+  category?: string;
   isLarge?: boolean;
-}) => (
-  <div className="flex flex-col items-center h-full">
-    <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full relative">
-      {entry.rank && <RankBadge rank={entry.rank} />}
-      <img
-        src={entry.image}
-        alt={entry.group}
-        className="w-full h-full object-cover"
-      />
-    </div>
-    <div
-      className={`flex flex-col justify-between flex-grow w-full text-white mt-4 ${
-        isLarge ? "text-2xl" : "text-xl"
-      }`}
-    >
-      <div className="text-center font-content text-yellow-400">
-        <div>{entry.group}</div>
-        <div className="text-sm text-left text-white px-2">
-          {entry.research_title}
+}) => {
+  const singleEntry = (projectKey: string): React.ReactNode => {
+    const project = projects[projectKey];
+    if (!project) {
+      return <div> Project not found </div>; // Fallback if the project key is invalid
+    }
+
+    return (
+      <>
+        <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full relative">
+          {rank && <RankBadge rank={rank} />}
+          {!category && <img
+            src={projects[projectKey].entry}
+            alt={projects[projectKey].group}
+            className="w-full h-full object-cover"
+          />}
+          {category === "presenter" && <img
+            src={projects[projectKey].presenter_entry}
+            alt={projects[projectKey].group}
+            className="w-full h-full object-cover"
+          />}
+          {category === "poster" && <img
+            src={projects[projectKey].poster_entry}
+            alt={projects[projectKey].group}
+            className="w-full h-full object-cover"
+          />}
         </div>
-      </div>
-      <div className="flex justify-end mt-4 font-content">
-        {/*
-        <Link to={`/projects/${entry.id}`}>
-          <Button variant="ghost" size="sm">
-            Learn More
-          </Button>
-        </Link>
-        */}
-      </div>
+        <div
+          className={`flex flex-col justify-between flex-grow w-full text-white mt-4 ${
+            isLarge ? "text-2xl" : "text-xl"
+          }`}
+        >
+          <div className="text-center font-content text-yellow-400">
+            <div>{projects[projectKey].group}</div>
+            <div className="text-sm text-center text-white px-2">
+              {projects[projectKey].research_title}
+            </div>
+          </div>
+          <div className="flex justify-center mt-4 font-content">
+            <Link to={`/projects/${projectKey}`}>
+              <Button variant="outline" size="sm">
+                Learn More
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </>
+    );
+  };
+
+  return (
+    <div className="flex flex-col items-center h-full">
+      {Array.isArray(entry) ? (
+        <Carousel className="w-full">
+          <CarouselContent>
+            {entry.map((groupEntry: string, groupEntryIndex) => (
+              <CarouselItem key={groupEntryIndex}>
+                <div className="aspect-square bg-gray-700 rounded-lg overflow-hidden w-full relative">
+                  {rank && <RankBadge rank={rank} />}
+                  {!category && <img
+                    src={projects[groupEntry].entry}
+                    alt={projects[groupEntry].group}
+                    className="w-full h-full object-cover"
+                  />}
+                  {category === "presenter" && <img
+                    src={projects[groupEntry].presenter_entry}
+                    alt={projects[groupEntry].group}
+                    className="w-full h-full object-cover"
+                  />}
+                  {category === "poster" && <img
+                    src={projects[groupEntry].poster_entry}
+                    alt={projects[groupEntry].group}
+                    className="w-full h-full object-cover"
+                  />}
+                </div>
+                <div
+                  className={`flex flex-col justify-between flex-grow w-full text-white mt-4 ${
+                    isLarge ? "text-2xl" : "text-xl"
+                  }`}
+                >
+                  <div className="text-center font-content text-yellow-400">
+                    <div>{projects[groupEntry].group}</div>
+                    <div className="text-sm text-center text-white px-2">
+                      {projects[groupEntry].research_title}
+                    </div>
+                  </div>
+                  <div className="flex justify-center mt-4 font-content">
+                    <Link to={`/projects/${groupEntry}`}>
+                      <Button variant="outline" size="sm">
+                        Learn More
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-2" />
+          <CarouselNext className="right-2" />
+        </Carousel>
+      ) : (
+        singleEntry(entry)
+      )} 
     </div>
-  </div>
-);
+  );
+};
 
 const SectionWrapper = ({
   index,
@@ -118,105 +189,54 @@ const SectionTitle = ({
   </div>
 );
 
-// Data constants
-const placeholderProjects = {
-  team1: {
-    id: "team1",
-    groupid: "team1",
-    research_title: "",
-    group: "Coming Soon",
-  },
-  team2: {
-    id: "team2",
-    groupid: "team2",
-    research_title: "",
-    group: "Coming Soon",
-  },
-  team3: {
-    id: "team3",
-    groupid: "team3",
-    research_title: "",
-    group: "Coming Soon",
-  },
-  team4: {
-    id: "team4",
-    groupid: "team4",
-    research_title: "",
-    group: "Coming Soon",
-  },
-  team5: {
-    id: "team5",
-    groupid: "team5",
-    research_title: "",
-    group: "Coming Soon",
-  },
-};
-
-const createProjectEntry = (id: string, rank?: number): Entry => ({
-  rank,
-  id,
-  image: LogoSilver,
-  research_title:
-    placeholderProjects[id as keyof typeof placeholderProjects].research_title,
-  group: placeholderProjects[id as keyof typeof placeholderProjects].group,
-});
-
 // Main component
 const HallOfFame = () => {
   const categories: Category[] = [
     {
       title: "BEST THESIS OVERALL",
-      entries: ["team1", "team2", "team3"].map((id, index) =>
-        createProjectEntry(id, index + 1)
-      ),
+      entries: ["book-i", "carident", "intelliwatch"],
       titleColor: "text-yellow-400",
     },
     {
       title: "MOST INNOVATIVE",
-      entries: ["team2", "team3", "team4"].map((id, index) =>
-        createProjectEntry(id, index + 1)
-      ),
+      entries: ["book-i", "carident", "intelliwatch"],
       titleColor: "text-white",
     },
     {
       title: "BEST PRESENTER",
-      entries: ["team2", "team1", "team5"].map((id, index) =>
-        createProjectEntry(id, index + 1)
-      ),
+      entries: ["mimical", "book-i", "carident"],
       titleColor: "text-yellow-400",
+      category: "presenter"
     },
     {
       title: "BEST AVP",
-      entries: ["team2", "team3", "team5"].map((id, index) =>
-        createProjectEntry(id, index + 1)
-      ),
+      entries: ["pnp", "agila", "intelliwatch"],
       titleColor: "text-white",
     },
     {
       title: "BEST POSTER",
-      entries: ["team1", "team2", "team5"].map((id, index) =>
-        createProjectEntry(id, index + 1)
-      ),
+      entries: ["onics", ["agila", "book-i", "ultrascan"], ["elixir", "intelliwatch"]],
       titleColor: "text-yellow-400",
+      category: "poster"
     },
   ];
 
   const bestByCategory = {
     title: "BEST THESIS BY CATEGORY",
     categories: [
-      { name: "Health", winner: createProjectEntry("team1") },
-      { name: "NLP", winner: createProjectEntry("team5") },
-      { name: "Data Analytics", winner: createProjectEntry("team3") },
-      { name: "Computer Vision", winner: createProjectEntry("team2") },
+      { name: "Health", winner: "carident" },
+      { name: "NLP", winner: "book-i" },
+      { name: "Data Analytics", winner: "agila" },
+      { name: "Computer Vision", winner: ["csgo", "intelliwatch", "pnp"] },
     ],
   };
 
   const bestMentor = {
     title: "BEST THESIS MENTOR",
     winner: {
-      name: "Coming Soon",
-      image: LogoSilver,
-      details: "",
+      name: "Mr. Abraham Magpantay",
+      image: MagpantayImg,
+      details: "A sincere thank you to Mr. Abraham Magpantay, whose unwavering guidance and dedication have been invaluable to the success of these thesis students. Your expertise, support, and encouragement have shaped their journeys, and for that, they are truly grateful. Please continue to inspire and guide future students, as your impact reaches far beyond!",
     },
     titleColor: "text-yellow-400",
   };
@@ -231,7 +251,7 @@ const HallOfFame = () => {
               key={entryIndex}
               className="w-full justify-self-center"
             >
-              <ProjectCard entry={entry} />
+              <ProjectCard entry={entry} rank={entryIndex + 1} category={category.category} />
             </div>
           ))}
         </div>
@@ -256,8 +276,8 @@ const HallOfFame = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-2" />
-          <CarouselNext className="right-2" />
+          <CarouselPrevious className="left-[-3rem] lg:left-2" />
+          <CarouselNext className="right-[-3rem] lg:right-2" />
         </Carousel>
       </div>
     </SectionWrapper>
