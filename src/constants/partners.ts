@@ -105,11 +105,14 @@ export const minors: Partner[] = [
   {
     name: 'Asti',
     logo: '/img/partners/asti.png',
+    fb: "https://www.facebook.com/feutechASTI",
+    ig: "https://www.instagram.com/feutechasti/",
   },
   {
     name: 'TEAMS',
     logo: '/img/partners/teams.png',
     fb: "https://www.facebook.com/feutechTEAMS",
+    ig: "https://www.instagram.com/feutechteams/",
   },
   {
     name: 'PUP Taguig Computer Society',
