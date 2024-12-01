@@ -89,18 +89,34 @@ export const majors: Partner[] = [
     fb: "https://www.facebook.com/ACOMSSofficial",
   },
   {
+    name: 'PUP ASCII',
+    logo: '/img/partners/pup-ascii.png',
+    fb: "https://www.facebook.com/PUPASCII",
+  },
+  {
     name: 'Earist Computer Student Association',
     logo: '/img/partners/earist.png',
     fb: "https://www.facebook.com/tatakComsa",
   },
-  {
-    name: 'CVSU Sites',
-    logo: '/img/partners/cvsu.png',
-    fb: "https://www.facebook.com/cvsu.elex.sites",
-  },
+  
 ]
 
 export const minors: Partner[] = [
+  {
+    name: 'Asti',
+    logo: '/img/partners/asti.png',
+  },
+  {
+    name: 'TEAMS',
+    logo: '/img/partners/teams.png',
+    fb: "https://www.facebook.com/feutechTEAMS",
+  },
+  {
+    name: 'PUP Taguig Computer Society',
+    logo: '/img/partners/pup-cs.png',
+    fb: "https://www.facebook.com/PUPTCS",
+    ig: "https://www.instagram.com/puptcs",
+  },
   {
     name: 'JPCS Asia Pacific College',
     logo: '/img/partners/jpcs-apc.png',
@@ -108,15 +124,9 @@ export const minors: Partner[] = [
     ig: "https://www.instagram.com/jpcs_apc",
   },
   {
-    name: 'PUP ASCII',
-    logo: '/img/partners/pup-ascii.png',
-    fb: "https://www.facebook.com/PUPASCII",
-  },
-  {
-    name: 'PUP Taguig Computer Society',
-    logo: '/img/partners/pup-cs.png',
-    fb: "https://www.facebook.com/PUPTCS",
-    ig: "https://www.instagram.com/puptcs",
+    name: 'CVSU Sites',
+    logo: '/img/partners/cvsu.png',
+    fb: "https://www.facebook.com/cvsu.elex.sites",
   },
 ]
 
